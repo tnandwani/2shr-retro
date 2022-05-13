@@ -1,0 +1,31 @@
+body {
+  font-family: 'ms_sans_serif' !;
+  background: #457DB7;
+  margin: 0;
+}
+
+.App {
+  text-align: left;
+  height: 100vh;
+}
+
+.loadingbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.stickyFooter {
+  position: fixed;
+  top: 95vh;
+  bottom: 0;
+  left: 0;
+
+}
