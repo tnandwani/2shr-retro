@@ -3,7 +3,7 @@ import { Conflnk102, Progman35, Setupslt3000 } from '@react95/icons/cjs/';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-    AppBar, Button,
+    AppBar, Button, Panel,
     ColorInput, Divider, List,
     ListItem, Toolbar
 } from 'react95';
@@ -30,17 +30,13 @@ export default function AppStart() {
     }, []);
     return (
         <div className='stickyFooter'>
+            <Panel style= {{width: '100%'}}>
 
-            <AppBar style={{
-                position: 'fixed',
-                top: '95vh',
-                bottom: '0',
-                left: '0'
-            }}>
+            
                 <Toolbar style={{ justifyContent: 'space-between' }}>
                     <div style={{ position: 'relative', display: 'inline-block' }}>
                         <Button onClick={() => setOpen(!open)} active={open} style={{ fontWeight: 'bold' }}>
-                            <img src='https://storybook.react95.io/static/media/logo.2a9c21d8.png' style={{ height: '20px', marginRight: 4 }} />
+                            <img src='https://storybook.react95.io/static/media/logo.2a9c21d8.png' alt='start-logo' style={{ height: '20px', marginRight: 4 }} />
                             Start
                         </Button>
                         {open && (
@@ -85,7 +81,7 @@ export default function AppStart() {
                         </div>
                     </div>
                 </Toolbar>
-            </AppBar>
+            </Panel>
         </div>
         
     )

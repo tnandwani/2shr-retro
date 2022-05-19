@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import { useState } from 'react';
 import {
     Window,
     WindowContent,
@@ -55,7 +54,7 @@ export const Music = (props) => {
                     {activeTab === 2 && (
                         <div>
                             <div>
-                                <iframe id='kdot' src="https://open.spotify.com/embed/album/1atjqOZTCdrjxjMyCPZc2g?utm_source=generator" width="100%" height="380" frameBorder="0" ></iframe>
+                                <iframe title= 'spotify' id='kdot' src="https://open.spotify.com/embed/album/1atjqOZTCdrjxjMyCPZc2g?utm_source=generator" width="100%" height="380" frameBorder="0" ></iframe>
                             </div>                        </div>
                     )}
                 </TabBody>

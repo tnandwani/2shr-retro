@@ -1,12 +1,4 @@
-import React from 'react';
-import {
-    Window,
-    WindowContent,
-    WindowHeader,
-    Button,
-    Toolbar,
-    Panel
-} from 'react95';
+import { Window, WindowContent, WindowHeader, Button, Panel } from 'react95';
 
 
 import { updateWindow } from '../../redux/slices/interfaceSlice'

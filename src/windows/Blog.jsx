@@ -1,4 +1,3 @@
-import React from 'react';
 import {
     Window,
     WindowContent,
@@ -10,7 +9,6 @@ import {
 
 import { updateWindow } from '../redux/slices/interfaceSlice'
 import { useDispatch } from 'react-redux';
-import DisabledToolbar from '../components/DisabledToolbar';
 
 
 export const Blog = (props) => {

@@ -1,4 +1,3 @@
-import React from 'react';
 import {
     Window,
     WindowContent,
@@ -8,7 +7,6 @@ import {
     Panel
 } from 'react95';
 
-import DisabledToolbar from '../components/DisabledToolbar';
 import { updateWindow } from '../redux/slices/interfaceSlice'
 import { useDispatch } from 'react-redux';
 

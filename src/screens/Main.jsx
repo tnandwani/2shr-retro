@@ -42,7 +42,7 @@ export default function Main() {
 
 
             {/* content */}
-            <main className='m-2'>
+            <main className='m-2 '>
                 <div className='bts'>
                     {/* Project Icons */}
                     <>

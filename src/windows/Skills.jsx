@@ -1,18 +1,8 @@
-import React from 'react';
-import {
-    Window,
-    WindowContent,
-    WindowHeader,
-    Button,
-    Toolbar,
-    Panel
-} from 'react95';
+import { Window, WindowContent, WindowHeader, Button } from 'react95';
 
 
 import { updateWindow } from '../redux/slices/interfaceSlice'
 import { useDispatch } from 'react-redux';
-
-import DisabledToolbar from '../components/DisabledToolbar';
 
 export const Skills = (props) => {
     const dispatch = useDispatch()
