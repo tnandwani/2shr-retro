@@ -1,11 +1,22 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { updateWindow } from '../redux/slices/interfaceSlice'
 
+
+import { Desktop } from 'react95';
+
 // Projects
 import { DiscoTab } from '../windows/projects/DiscoTab';
 import { DogWatchTab } from '../windows/projects/DogWatchTab';
 import { AugmaTab } from '../windows/projects/AugmaTab';
 import { WavbandTab } from '../windows/projects/WavbandTab';
+
+
+//images 
+
+import dogWatchLogo from '../assets/retro-dogwatch.png' 
+import discoLogo from '../assets/retro-disco.png'
+import augmaLogo from '../assets/retro-augma.png' 
+import wavbandsLogo from '../assets/retro-wavbands.png' 
 
 
 // WIndows
@@ -30,6 +41,8 @@ import {
 } from '@react95/icons/cjs/';
 
 
+
+
 export default function Main() {
 
     const dispatch = useDispatch()
@@ -46,22 +59,26 @@ export default function Main() {
                 <div className='bts'>
                     {/* Project Icons */}
                     <>
-                        <div className='mb-4 d-flex ' onClick={() => { dispatch(updateWindow('Dog Watch')) }} >
-                            <ScrollingMarquee100 variant="32x32_4" />
-                            <p className='iconText mx-3'>Dog Watch</p>
+                        <div className='my-2' onClick={() => { dispatch(updateWindow('Dog Watch')) }} >
+                            <Desktop>
+                                <img className='desktopLogo' src={dogWatchLogo} alt="dog watch" />
+                            </Desktop>
                         </div>
 
-                        <div className='my-4 d-flex' onClick={() => { dispatch(updateWindow('DISCO')) }} >
-                            <FlyingThroughSpace100 variant="32x32_4" />
-                            <p className='iconText mx-3'>DISCO</p>
+                        <div className='my-2' onClick={() => { dispatch(updateWindow('DISCO')) }} >
+                            <Desktop>
+                                <img className='desktopLogo' src={discoLogo} alt="dog watch" />
+                            </Desktop>
                         </div>
-                        <div className='my-4 d-flex' onClick={() => { dispatch(updateWindow('Augma')) }} >
-                            <FlyingWindows100 variant="32x32_4" />
-                            <p className='iconText mx-3'>Augma</p>
+                        <div className='my-2' onClick={() => { dispatch(updateWindow('Augma')) }} >
+                            <Desktop>
+                                <img className='desktopLogo' src={augmaLogo} alt="dog watch" />
+                            </Desktop>
                         </div>
-                        <div className='my-4 d-flex' onClick={() => { dispatch(updateWindow('WAV Bands')) }} >
-                            <D3FlowerBox100 variant="32x32_4" />
-                            <p className='iconText mx-3'>WAV Bands</p>
+                        <div className='my-2' onClick={() => { dispatch(updateWindow('WAV Bands')) }} >
+                            <Desktop>
+                                <img className='desktopLogo' src={wavbandsLogo} alt="dog watch" />
+                            </Desktop>
                         </div>
                     </>
 
