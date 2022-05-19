@@ -73,6 +73,7 @@ body {
   height: 80vh;
   transform: translate(-50%, -50%);
   position: fixed;
+  margin-top: 15px;
   left: 50%;
   top: 50%;
   z-index: 1050;
