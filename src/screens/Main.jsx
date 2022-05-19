@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { updateWindow } from '../redux/slices/interfaceSlice'
 
 
-import { Desktop } from 'react95';
+import Desktop  from '../components/Desktop';
 
 // Projects
 import { DiscoTab } from '../windows/projects/DiscoTab';
@@ -59,23 +59,23 @@ export default function Main() {
                 <div className='bts'>
                     {/* Project Icons */}
                     <>
-                        <div className='my-2' onClick={() => { dispatch(updateWindow('Dog Watch')) }} >
+                        <div className='mb-3' onClick={() => { dispatch(updateWindow('Dog Watch')) }} >
                             <Desktop>
                                 <img className='desktopLogo' src={dogWatchLogo} alt="dog watch" />
                             </Desktop>
                         </div>
 
-                        <div className='my-2' onClick={() => { dispatch(updateWindow('DISCO')) }} >
+                        <div className='my-3' onClick={() => { dispatch(updateWindow('DISCO')) }} >
                             <Desktop>
                                 <img className='desktopLogo' src={discoLogo} alt="dog watch" />
                             </Desktop>
                         </div>
-                        <div className='my-2' onClick={() => { dispatch(updateWindow('Augma')) }} >
+                        <div className='my-3' onClick={() => { dispatch(updateWindow('Augma')) }} >
                             <Desktop>
                                 <img className='desktopLogo' src={augmaLogo} alt="dog watch" />
                             </Desktop>
                         </div>
-                        <div className='my-2' onClick={() => { dispatch(updateWindow('WAV Bands')) }} >
+                        <div className='my-3' onClick={() => { dispatch(updateWindow('WAV Bands')) }} >
                             <Desktop>
                                 <img className='desktopLogo' src={wavbandsLogo} alt="dog watch" />
                             </Desktop>
