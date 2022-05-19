@@ -1,21 +1,16 @@
-import React, { useEffect, useState } from 'react'
+// Icons
+import { Conflnk102, Progman35, Setupslt3000 } from '@react95/icons/cjs/';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-    AppBar,
-    Toolbar,
-    TextField,
-    Button,
-    ColorInput,
-    List,
-    ListItem,
-    Divider
+    AppBar, Button,
+    ColorInput, Divider, List,
+    ListItem, Toolbar
 } from 'react95';
 import { changeColor } from '../redux/slices/interfaceSlice';
 import ThemeButton from './ThemeButton';
 
 
-// Icons
-import { Progman35, Earth, Conflnk102, Setupslt3000 } from '@react95/icons/cjs/';
 
 
 export default function AppStart() {
@@ -34,60 +29,64 @@ export default function AppStart() {
         };
     }, []);
     return (
-        <AppBar style={{
-            position: 'fixed',
-            top: '95vh',
-            bottom: '0',
-            left: '0'
-        }}>
-            <Toolbar style={{ justifyContent: 'space-between' }}>
-                <div style={{ position: 'relative', display: 'inline-block' }}>
-                    <Button onClick={() => setOpen(!open)} active={open} style={{ fontWeight: 'bold' }}>
-                        <img src='https://storybook.react95.io/static/media/logo.2a9c21d8.png' style={{ height: '20px', marginRight: 4 }} />
-                        Start
-                    </Button>
-                    {open && (
-                        <List
-                            style={{
-                                position: 'absolute',
-                                left: '0',
-                                bottom: '100%',
-                                minWidth: '135px',
-                                padding: 5,
-                                zIndex: 1050,
-                            }}
-                            onClick={() => setOpen(false)}>
-                            <ListItem>
-                                Githhub
-                                <Setupslt3000 variant="32x32_4" />
-                            </ListItem>
+        <div className='stickyFooter'>
 
-                            <ListItem>
-                                LinkedIn
-                                <Conflnk102 variant="32x32_4" />
+            <AppBar style={{
+                position: 'fixed',
+                top: '95vh',
+                bottom: '0',
+                left: '0'
+            }}>
+                <Toolbar style={{ justifyContent: 'space-between' }}>
+                    <div style={{ position: 'relative', display: 'inline-block' }}>
+                        <Button onClick={() => setOpen(!open)} active={open} style={{ fontWeight: 'bold' }}>
+                            <img src='https://storybook.react95.io/static/media/logo.2a9c21d8.png' style={{ height: '20px', marginRight: 4 }} />
+                            Start
+                        </Button>
+                        {open && (
+                            <List
+                                style={{
+                                    position: 'absolute',
+                                    left: '0',
+                                    bottom: '100%',
+                                    minWidth: '135px',
+                                    padding: 5,
+                                    zIndex: 1050,
+                                }}
+                                onClick={() => setOpen(false)}>
+                                <ListItem>
+                                    Githhub
+                                    <Setupslt3000 variant="32x32_4" />
+                                </ListItem>
 
-                            </ListItem>
-                            <Divider />
-                            <ListItem>
-                                Email Me
-                                <Progman35 variant="32x32_4" />
-                            </ListItem>
-                        </List>
-                    )}
-                </div>
+                                <ListItem>
+                                    LinkedIn
+                                    <Conflnk102 variant="32x32_4" />
 
-                <div className='d-flex flex-row '>
-                    <div className='mx-2' >
-                        <ThemeButton />
+                                </ListItem>
+                                <Divider />
+                                <ListItem>
+                                    Email Me
+                                    <Progman35 variant="32x32_4" />
+                                </ListItem>
+                            </List>
+                        )}
                     </div>
-                    <div>
-                        <ColorInput variant='flat' defaultValue={bgColor} onChange={(value) => { dispatch(changeColor(value.target.value)) }} />
+
+                    <div className='d-flex flex-row '>
+                        <div className='mx-2' >
+                            <ThemeButton />
+                        </div>
+                        <div>
+                            <ColorInput variant='flat' defaultValue={bgColor} onChange={(value) => { dispatch(changeColor(value.target.value)) }} />
+                        </div>
+                        <div className='d-none d-lg-block .d-xl-none'>
+                            <p className='mt-1 mx-2 '>{date.toLocaleTimeString()}</p>
+                        </div>
                     </div>
-                    <div className='d-none d-lg-block .d-xl-none'>
-                        <p className='mt-1 mx-2 '>{date.toLocaleTimeString()}</p>
-                    </div>
-                </div>
-            </Toolbar>
-        </AppBar>
+                </Toolbar>
+            </AppBar>
+        </div>
+        
     )
 }

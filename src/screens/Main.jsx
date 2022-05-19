@@ -1,8 +1,3 @@
-import React, { useState } from 'react'
-import {
-    Desktop
-} from 'react95';
-
 import { useSelector, useDispatch } from 'react-redux'
 import { updateWindow } from '../redux/slices/interfaceSlice'
 
@@ -22,11 +17,17 @@ import { Blog } from '../windows/Blog';
 
 import AppStart from '../components/AppStart'
 
-import discoLogo from '../assets/retro-disco.png'
-// import wavbandLogo from '../assets/retro-.png'
-import augmaLogo from '../assets/retro-augma.png'
-import dogwatchLogo from '../assets/retro-dogwatch.png'
-import { Msnstart100, Url1103, Progman24, CdMusic, D3FlowerBox100, CurvesAndColors100, Desk100, FlyingWindows100, FlyingThroughSpace100, MystifyYourMind100, ScrollingMarquee100} from '@react95/icons/cjs/';
+
+import {
+    Msnstart100,
+    Url1103,
+    Progman24,
+    CdMusic,
+    D3FlowerBox100,
+    FlyingWindows100,
+    FlyingThroughSpace100,
+    ScrollingMarquee100,
+} from '@react95/icons/cjs/';
 
 
 export default function Main() {

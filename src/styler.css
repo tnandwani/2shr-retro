@@ -22,10 +22,9 @@ body {
 }
 
 .stickyFooter {
-  position: fixed;
-  top: 95vh;
-  bottom: 0;
-  left: 0;
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
 }
 
 

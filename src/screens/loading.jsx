@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import { Progress, Hourglass, Desktop } from 'react95';
+import { Progress, Hourglass } from 'react95';
 import ThemeButton from '../components/ThemeButton';
 export const LoadingScreen = (props) => {
 
