@@ -1,6 +1,5 @@
 body {
   font-family: 'ms_sans_serif' !;
-  background: #457DB7;
   margin: 0;
 }
 
@@ -27,5 +26,107 @@ body {
   top: 95vh;
   bottom: 0;
   left: 0;
+}
 
+
+.bts {
+  position: absolute;
+  z-index: -1;
+}
+
+.otherIcons {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.projectModal {
+  width: 90vw;
+  height: 80vh;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  left: 50%;
+  top: 45%;
+  z-index: 1050;
+}
+
+.window-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: -1px;
+  margin-top: -1px;
+  transform: rotateZ(45deg);
+  position: relative;
+}
+
+.window {
+  width: 90vw;
+  height: 80vh;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 1050;
+}
+
+.window-small {
+  width: 40vw;
+  min-height: 30vh !important;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 1050;
+}
+
+@media only screen and (max-width: 750px) {
+  .window-small {
+    width: 80vw !important;
+    min-height: 30vh !important;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 1050;
+  }
+
+}
+
+
+.window:nth-child(2) {
+  margin: 2rem;
+}
+
+.footer {
+  display: block;
+  margin: 0.25rem;
+  height: 31px;
+  line-height: 31px;
+  padding-left: 0.25rem;
+}
+
+
+
+
+/* PROJJECT SPECIFICS */
+
+.pattern-dots {
+  background-image: radial-gradient(currentColor 1.5px, transparent 1.5px) !important;
+  background-size: calc(10 * 1px) calc(10 * 1px) !important;
+}
+
+.iconText {
+  margin-top: -5;
+}
+
+
+.superfront {
+  z-index: 2;
 }

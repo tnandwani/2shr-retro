@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Progress, Hourglass, Desktop } from 'react95';
-
+import ThemeButton from '../components/ThemeButton';
 export const LoadingScreen = (props) => {
 
     return (
@@ -10,8 +10,11 @@ export const LoadingScreen = (props) => {
                 <br />
                 <Progress shadow variant='tile' value={Math.floor(props.percent)} />
                 <br />
-                <h1>Loading the greatest website on the internet.</h1>
+                <h1 className='text-white'>Loading the greatest website on the internet.</h1>
 
+
+                <br />
+                <ThemeButton />
             </div>
         </div>
     );
