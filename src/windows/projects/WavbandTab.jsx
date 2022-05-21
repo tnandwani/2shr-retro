@@ -4,7 +4,7 @@ import { Window, WindowContent, WindowHeader, Button, Panel } from 'react95';
 import { updateWindow } from '../../redux/slices/interfaceSlice'
 import { useDispatch } from 'react-redux';
 import DisabledToolbar from '../../components/DisabledToolbar';
-import wavbandsHeader from './wordart/wavbands.png';
+import wavbandsHeader from './wordart/iconwavbands.png';
 
 
 export const WavbandTab = (props) => {

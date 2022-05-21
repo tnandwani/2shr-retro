@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 import DisabledToolbar from '../../components/DisabledToolbar';
 
 
-import discoHeader from './wordart/disco.png';
+import discoHeader from './wordart/icondisco.png';
 
 export const DiscoTab = (props) => {
     const dispatch = useDispatch()

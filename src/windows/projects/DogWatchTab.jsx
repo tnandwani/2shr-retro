@@ -4,7 +4,7 @@ import { Window, WindowContent, WindowHeader, Button, Panel } from 'react95';
 import { updateWindow } from '../../redux/slices/interfaceSlice'
 import { useDispatch } from 'react-redux';
 import DisabledToolbar from '../../components/DisabledToolbar';
-import dogwatchHeader from './wordart/dogwatch.png';
+import dogwatchHeader from './wordart/icondogwatch.png';
 
 
 export const DogWatchTab = (props) => {

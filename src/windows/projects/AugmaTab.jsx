@@ -5,7 +5,7 @@ import { updateWindow } from '../../redux/slices/interfaceSlice'
 import { useDispatch } from 'react-redux';
 import DisabledToolbar from '../../components/DisabledToolbar';
 
-import augmaHeader from './wordart/augma.png'
+import augmaHeader from './wordart/iconaugma.png'
 
 export const AugmaTab = (props) => {
     const dispatch = useDispatch()
