@@ -5,21 +5,22 @@ import {
     WindowHeader,
     Button,
     Tabs,
+    Panel,
     TabBody,
     Tab,
-  
+
 } from 'react95';
 
 
 import { updateWindow } from '../redux/slices/interfaceSlice'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import ArtistTable from '../components/ArtistTable';
 
 export const Music = (props) => {
     const dispatch = useDispatch()
+    const artistChoice = useSelector((state) => state.interface.artist);
     const [activeTab, setTab] = useState(0);
-
 
     const handleChange = (e, value) => setTab(value);
 
@@ -32,7 +33,7 @@ export const Music = (props) => {
                 </Button>
 
             </WindowHeader>
-            
+
             <WindowContent>
                 <Tabs value={activeTab} onChange={handleChange}>
                     <Tab value={0}>My Top 5</Tab>
@@ -42,8 +43,11 @@ export const Music = (props) => {
                 <TabBody >
                     {activeTab === 0 && (
                         <div>
-                          <ArtistTable />
-     
+                            <ArtistTable />
+            
+                            <Panel style = {{width: '100%', padding: '10px', marginTop: '10px'}}>
+                                <iframe title='drake' src={artistChoice} width="100%" height='80' allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                            </Panel>
                         </div>
                     )}
                     {activeTab === 1 && (
@@ -54,8 +58,10 @@ export const Music = (props) => {
                     {activeTab === 2 && (
                         <div>
                             <div>
-                                <iframe title= 'spotify' id='kdot' src="https://open.spotify.com/embed/album/1atjqOZTCdrjxjMyCPZc2g?utm_source=generator" width="100%" height="380" frameBorder="0" ></iframe>
-                            </div>                        </div>
+                                <iframe title='spotify' id='kdot' src="https://open.spotify.com/embed/album/1atjqOZTCdrjxjMyCPZc2g?utm_source=generator" width="100%" height="380" frameBorder="0" ></iframe>
+                            </div>
+
+                        </div>
                     )}
                 </TabBody>
             </WindowContent>

@@ -9,7 +9,8 @@ export const interfaceSlice = createSlice({
         theme: 0,
         bgColor: '#000',
         textColor: '#fff',
-        tooltip: "That does not work"
+        tooltip: "That does not work",
+        artist: 'https://open.spotify.com/embed/artist/3TVXtAsR1Inumwj472S9r4?utm_source=generator',
     },
     reducers: {
         updateWindow: (state, action) => {
@@ -27,19 +28,21 @@ export const interfaceSlice = createSlice({
             state.textColor = invertHex(action.payload)
         },
         getTooltip: (state) => {
-           const randomWords = [
-               "This doesn't work",
-               "Not this one either",
-               "Nope",
-               "Wrong Again",
-               "Almost had it",
-               "That one looked real",
-               "Gotcha Again",
-               "I'll take that as a compliment"
-           ]
-           state.tooltip =  randomWords[(Math.floor(Math.random() * randomWords.length)) - 1];
+            const randomWords = [
+                "This doesn't work",
+                "Not this one either",
+                "Nope",
+                "Wrong Again",
+                "Almost had it",
+                "That one looked real",
+                "Gotcha Again",
+                "I'll take that as a compliment"
+            ]
+            state.tooltip = randomWords[(Math.floor(Math.random() * randomWords.length)) - 1];
         },
-
+        changeArtist: (state, action) => {
+           state.artist = action.payload;
+        },
 
     },
 })
@@ -58,7 +61,8 @@ export const {
     updateWindow,
     changeTheme,
     changeColor,
-    getTooltip
+    getTooltip,
+    changeArtist
 } = interfaceSlice.actions
 
 export default interfaceSlice.reducer

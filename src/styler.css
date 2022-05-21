@@ -1,7 +1,6 @@
 body {
   font-family: 'ms_sans_serif' !;
   margin: 0;
-  overflow-y: hidden;
 }
 
 .App {
@@ -80,7 +79,7 @@ body {
 }
 
 .window-small {
-  width: 40vw;
+  width: 50vw;
   min-height: 30vh !important;
   transform: translate(-50%, -50%);
   position: fixed;
@@ -137,4 +136,8 @@ body {
 .desktopLogo{
   height: 55px;
   width: 80px;
+}
+
+.toolLogo{
+  height: 50px;
 }

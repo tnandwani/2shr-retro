@@ -33,12 +33,12 @@ import { useSelector } from 'react-redux';
 
 
 
-const themePack = [original, matrix, aiee, lilac, fxDev, darkTeal, tokyoDark, highContrast, modernDark, polarized, powerShell, solarizedLight, toner, vistaesqueMidnight]
+const themePack = [matrix, original, aiee, lilac, fxDev, darkTeal, tokyoDark, highContrast, modernDark, polarized, powerShell, solarizedLight, toner, vistaesqueMidnight]
 
 export default function App() {
 
   const [percent, setPercent] = useState(0);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const themeChoice = useSelector((state) => state.interface.theme);
   const bgColor = useSelector((state) => state.interface.bgColor);
   const textColor = useSelector((state) => state.interface.textColor);
