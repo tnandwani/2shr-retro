@@ -29,16 +29,7 @@ import { Blog } from '../windows/Blog';
 import AppStart from '../components/AppStart'
 
 
-import {
-    Msnstart100,
-    Url1103,
-    Progman24,
-    CdMusic,
-    D3FlowerBox100,
-    FlyingWindows100,
-    FlyingThroughSpace100,
-    ScrollingMarquee100,
-} from '@react95/icons/cjs/';
+import { Msnstart100, Url1103, Progman24, CdMusic } from '@react95/icons/cjs/';
 
 
 
