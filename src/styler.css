@@ -134,11 +134,20 @@ body {
   z-index: 2;
 }
 
-.desktopLogo{
+.desktopLogo {
   height: 55px;
   width: 80px;
 }
 
-.toolLogo{
+.toolLogo {
   height: 50px;
+}
+
+
+.wordArt {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+ 
 }

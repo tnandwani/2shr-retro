@@ -5,6 +5,8 @@ import { updateWindow } from '../../redux/slices/interfaceSlice'
 import { useDispatch } from 'react-redux';
 import DisabledToolbar from '../../components/DisabledToolbar';
 
+import augmaHeader from './wordart/augma.png'
+
 export const AugmaTab = (props) => {
     const dispatch = useDispatch()
 
@@ -22,12 +24,9 @@ export const AugmaTab = (props) => {
 
             <DisabledToolbar />
             <WindowContent>
-                <Panel>
-                    <h1 className='mx-5 my-3'>Augma</h1>
-
-                </Panel>
-                <br />
-                <br />
+                <div className='w-100 mb-3'>
+                    <img className='wordArt' src={augmaHeader} alt='augma' />
+                </div>
                 <Panel>
                     <p className='m-3'>
                         A freelance project I took on. Augma allows you to buy physical art in an augmented reality marketplace. You can choose from a wide variety of art and place it in your room using the iPhone's AR abilities. You can then order the art directly to your home.

@@ -6,6 +6,9 @@ import { useDispatch } from 'react-redux';
 
 import DisabledToolbar from '../../components/DisabledToolbar';
 
+
+import discoHeader from './wordart/disco.png';
+
 export const DiscoTab = (props) => {
     const dispatch = useDispatch()
 
@@ -24,10 +27,9 @@ export const DiscoTab = (props) => {
 
 
             <WindowContent>
-                <Panel>
-                    <h1 className='mx-5 my-3'>DISCO</h1>
-
-                </Panel>
+                <div className='w-100 mb-3'>
+                    <img className='wordArt' src={discoHeader} alt='disco' />
+                </div>
                 <Panel>
                     <p className='m-3'>
                         A freelance project I took on. Augma allows you to buy physical art in an augmented reality marketplace. You can choose from a wide variety of art and place it in your room using the iPhone's AR abilities. You can then order the art directly to your home.
