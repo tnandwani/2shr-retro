@@ -32,6 +32,11 @@ export const AugmaTab = (props) => {
                         A freelance project I took on. Augma allows you to buy physical art in an augmented reality marketplace. You can choose from a wide variety of art and place it in your room using the iPhone's AR abilities. You can then order the art directly to your home.
                     </p>
                 </Panel>
+                <Panel>
+                    <p className='m-3'>
+                        Demo by request per founders request. 
+                    </p>
+                </Panel>
 
 
             </WindowContent>

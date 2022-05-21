@@ -31,7 +31,7 @@ export const DogWatchTab = (props) => {
                 </div>
                 <Panel>
                     <p className='m-3'>
-                        A freelance project I took on. Augma allows you to buy physical art in an augmented reality marketplace. You can choose from a wide variety of art and place it in your room using the iPhone's AR abilities. You can then order the art directly to your home.
+                        An app that is available on all platforms. It serves as a community for dog owners. Users can assign their dog as lost in their neighborhood and alert others users via push notification. They can also view other dogs friends in their neighborhood. Dog Watch also offers important information for new and experienced dog owners.
                     </p>
                 </Panel>
 

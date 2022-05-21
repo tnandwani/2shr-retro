@@ -32,9 +32,15 @@ export const DiscoTab = (props) => {
                 </div>
                 <Panel>
                     <p className='m-3'>
-                        A freelance project I took on. Augma allows you to buy physical art in an augmented reality marketplace. You can choose from a wide variety of art and place it in your room using the iPhone's AR abilities. You can then order the art directly to your home.
+                        An independent artist platform that provides creators with all the management tools necessary to stay independent forever. Offers services such as rights management, music streaming, live broadcasting, audio marketplace, tour creator, and many more.
                     </p>
                 </Panel>
+                <Panel>
+                    <p className='m-3'>
+                        Currently in development (looking for help)
+                    </p>
+                </Panel>
+
 
 
             </WindowContent>
