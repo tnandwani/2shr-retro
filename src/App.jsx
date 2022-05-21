@@ -30,20 +30,24 @@ import Main from './screens/Main';
 import './styler.css'
 import { useSelector } from 'react-redux';
 
+var shouldLoad = true;
 
-
+if (window.location.hostname === 'localhost') {
+    shouldLoad = false;
+}
 
 const themePack = [matrix, original, aiee, lilac, fxDev, darkTeal, tokyoDark, highContrast, modernDark, polarized, powerShell, solarizedLight, toner, vistaesqueMidnight]
 
 export default function App() {
 
   const [percent, setPercent] = useState(0);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(shouldLoad);
   const themeChoice = useSelector((state) => state.interface.theme);
   const bgColor = useSelector((state) => state.interface.bgColor);
   const textColor = useSelector((state) => state.interface.textColor);
 
-
+ 
+ 
   const GlobalStyles = createGlobalStyle`
   @font-face {
     font-family: 'ms_sans_serif' !important;
