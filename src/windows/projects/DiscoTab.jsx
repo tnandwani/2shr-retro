@@ -25,7 +25,7 @@ export const DiscoTab = (props) => {
 
             <WindowContent>
                 <Panel>
-                    <h1 className='m-5'>Augma</h1>
+                    <h1 className='mx-5 my-3'>DISCO</h1>
 
                 </Panel>
                 <Panel>
