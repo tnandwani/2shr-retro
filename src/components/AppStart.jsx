@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
     Button, Panel,
     ColorInput, Divider, List,
-    ListItem, Toolbar
+    ListItem, Toolbar, Anchor
 } from 'react95';
 import { changeColor } from '../redux/slices/interfaceSlice';
 import ThemeButton from './ThemeButton';
@@ -51,18 +51,24 @@ export default function AppStart() {
                                 }}
                                 onClick={() => setOpen(false)}>
                                 <ListItem>
-                                    Githhub
+                                    <Anchor href="https://www.github.com/tnandwani/" target='_blank'>
+                                        Github
+                                    </Anchor>
                                     <Setupslt3000 variant="32x32_4" />
                                 </ListItem>
 
                                 <ListItem>
-                                    LinkedIn
+                                    <Anchor href="https://www.linkedin.com/in/tnandwani/" target='_blank'>
+                                        LinkedIn
+                                    </Anchor>
                                     <Conflnk102 variant="32x32_4" />
 
                                 </ListItem>
                                 <Divider />
                                 <ListItem>
-                                    Email Me
+                                    <Anchor href="mailto:me@tnandwani.com" target='_blank'>
+                                        Email
+                                    </Anchor>
                                     <Progman35 variant="32x32_4" />
                                 </ListItem>
                             </List>
