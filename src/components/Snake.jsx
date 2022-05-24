@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import { Panel, Button } from "react95";
+import '../brain'
+import { setHighScore } from "../brain";
+import store from "../redux/store";
+
 
 const HEIGHT = 10;
 const WIDTH = 10;
@@ -22,12 +26,16 @@ const emptyRows = () => [...Array(WIDTH)].map((_) => [...Array(HEIGHT)].map((_) 
 
 const increaseSpeed = (speed) => speed - 10 * (speed > 10)
 
+const dbHighScore = store.getState().interface.highscore
+
+
 const initialState = {
     rows: emptyRows(),
     snake: [getRandom()],
     food: getRandom(),
     direction: STOP,
     speed: 150,
+    highscore: store.getState().interface.highscore
 }
 
 class Snake extends Component {
@@ -35,12 +43,17 @@ class Snake extends Component {
     constructor() {
         super();
         this.state = initialState;
+
     }
 
     componentDidMount() {
         setInterval(this.moveSnake, this.state.speed);
         document.onkeydown = this.changeDirection;
-        document.title = "snake-game";
+        this.setState({
+            highscore: dbHighScore
+        });
+
+
     }
 
     componentDidUpdate() {
@@ -98,7 +111,19 @@ class Snake extends Component {
         for (let i = 0; i < snake.length - 3; i++) {
             if ((head.x === snake[i].x) && (head.y === snake[i].y)) {
                 this.setState(initialState);
-                alert(`game over: ${snake.length * 10}`)
+
+                let newScore = snake.length * 10
+
+                // check if new high score
+                if (this.state.highscore < newScore ) {
+                    // new high score
+                    alert(`NEW HIGH SCORE: ${newScore}`)
+
+                    setHighScore(newScore)
+                }
+                else {
+                    alert(`game over: ${newScore}`)
+                }
             }
         }
     }
@@ -162,11 +187,16 @@ class Snake extends Component {
                 <Panel>
                     <div className="mx-5">
                         <h1 className="snakeFont mx-5" >SNAKE </h1>
+                        <h1>HIGH SCORE: <span>{this.state.highscore}</span></h1>
+
                         {((this.state.direction) === STOP) &&
-                        <h1>Press any arrow key to start</h1>
+                            <h1>Press any arrow key to start</h1>
                         }
                         {((this.state.direction) !== STOP) &&
-                            <h1>{(this.state.snake.length * 10) - 10}</h1>
+                            <>
+                                <h1>{(this.state.snake.length * 10)}</h1>
+
+                            </>
                         }
 
                     </div>

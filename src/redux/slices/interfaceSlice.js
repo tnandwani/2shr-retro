@@ -2,6 +2,7 @@ import {
     createSlice
 } from '@reduxjs/toolkit'
 
+
 export const interfaceSlice = createSlice({
     name: 'interfaceSlice',
     initialState: {
@@ -11,6 +12,7 @@ export const interfaceSlice = createSlice({
         textColor: '#fff',
         tooltip: "That does not work",
         artist: 'https://open.spotify.com/embed/artist/3TVXtAsR1Inumwj472S9r4?utm_source=generator',
+        highscore: 0
     },
     reducers: {
         updateWindow: (state, action) => {
@@ -43,6 +45,9 @@ export const interfaceSlice = createSlice({
         changeArtist: (state, action) => {
            state.artist = action.payload;
         },
+        setScoreState: (state, action) => {
+             state.highscore = action.payload;
+         },
 
     },
 })
@@ -62,7 +67,8 @@ export const {
     changeTheme,
     changeColor,
     getTooltip,
-    changeArtist
+    changeArtist,
+    setScoreState
 } = interfaceSlice.actions
 
 export default interfaceSlice.reducer

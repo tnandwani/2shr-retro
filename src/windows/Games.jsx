@@ -17,7 +17,7 @@ export const Games = (props) => {
 
 
     return (
-        <Window className='window-small pattern-dots'>
+        <Window className='window-game pattern-dots'>
             <WindowHeader className='window-header'>
                 <span>Games</span>
                 <Button onClick={() => { dispatch(updateWindow('none')) }}>

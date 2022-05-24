@@ -88,6 +88,21 @@ body {
   z-index: 1050;
 }
 
+.snakeFont {
+  font-size: 30px;
+}
+
+.window-game {
+  min-width: 50vw;
+  min-height: 30vh !important;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 1050;
+}
+
+
 
 
 
@@ -191,6 +206,16 @@ body {
     z-index: 1050;
   }
 
+  .window-game {
+    width: 90vw !important;
+    min-height: 30vh !important;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 1050;
+  }
+
   .window {
     width: 90vw;
     height: 80vh;
@@ -240,8 +265,4 @@ body {
   }
 
 
-}
-
-.snakeFont {
-  font-size: 35px;
 }
