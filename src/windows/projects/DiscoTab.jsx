@@ -23,7 +23,7 @@ export const DiscoTab = (props) => {
                 </Button>
 
             </WindowHeader>
-            <DisabledToolbar />
+            <DisabledToolbar github={'https://github.com/tnandwani/disco-music'} visit={'https://discolive.app/'} />
 
 
             <WindowContent>

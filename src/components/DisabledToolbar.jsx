@@ -6,7 +6,7 @@ Button,
 Tooltip} from 'react95'
 import { getTooltip } from '../redux/slices/interfaceSlice';
 
-export default function DisabledToolbar() {
+export default function DisabledToolbar(props) {
   
   const dispatch = useDispatch()
   const toolText = useSelector((state) => state.interface.tooltip);
@@ -22,10 +22,10 @@ export default function DisabledToolbar() {
         </Button>
 
       </Tooltip>
-      <Button variant='menu' size='sm'>
+      <Button variant='menu' size='sm' onClick = {()=> {window.open(props.github)}}>
         View Code
       </Button>
-      <Button variant='menu' size='sm'>
+      <Button variant='menu' size='sm' onClick={() => { window.open(props.visit) }}>
         Visit Site
       </Button>
     </Toolbar>  )

@@ -21,7 +21,7 @@ export const WavbandTab = (props) => {
                 </Button>
 
             </WindowHeader>
-            <DisabledToolbar />
+            <DisabledToolbar visit={'https://www.kickstarter.com/projects/1288271757/wav-bands-youll-never-need-an-aux-cord-again'} />
 
 
             <WindowContent>

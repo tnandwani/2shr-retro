@@ -22,7 +22,7 @@ export const AugmaTab = (props) => {
 
             </WindowHeader>
 
-            <DisabledToolbar />
+            <DisabledToolbar  />
             <WindowContent>
                 <div className='w-100 mb-3'>
                     <img className='wordArt' src={augmaHeader} alt='augma' />

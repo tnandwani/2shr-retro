@@ -21,7 +21,7 @@ export const DogWatchTab = (props) => {
                 </Button>
 
             </WindowHeader>
-            <DisabledToolbar />
+            <DisabledToolbar github={'https://github.com/tnandwani/dog-watch'} visit={'https://dogwatch.app/'} />
 
 
             <WindowContent>
