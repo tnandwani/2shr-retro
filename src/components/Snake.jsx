@@ -26,8 +26,6 @@ const emptyRows = () => [...Array(WIDTH)].map((_) => [...Array(HEIGHT)].map((_) 
 
 const increaseSpeed = (speed) => speed - 10 * (speed > 10)
 
-const dbHighScore = store.getState().interface.highscore
-
 
 const initialState = {
     rows: emptyRows(),
@@ -50,7 +48,7 @@ class Snake extends Component {
         setInterval(this.moveSnake, this.state.speed);
         document.onkeydown = this.changeDirection;
         this.setState({
-            highscore: dbHighScore
+            highscore: store.getState().interface.highscore
         });
 
 
@@ -187,7 +185,7 @@ class Snake extends Component {
                 <Panel>
                     <div className="mx-5">
                         <h1 className="snakeFont mx-5" >SNAKE </h1>
-                        <h1>HIGH SCORE: <span>{this.state.highscore}</span></h1>
+                        <h1>GLOBAL HIGH SCORE: <span>{this.state.highscore}</span></h1>
 
                         {((this.state.direction) === STOP) &&
                             <h1>Press any arrow key to start</h1>
