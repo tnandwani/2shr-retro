@@ -9,7 +9,7 @@ export const LoadingScreen = (props) => {
                 <br />
                 <Progress shadow variant='tile' value={Math.floor(props.percent)} />
                 <br />
-                <h1 className='text-white'>Loading the greatest website on the internet.</h1>
+                <h1 className='text-center'>Loading the greatest website on the internet.</h1>
 
 
                 <br />

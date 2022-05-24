@@ -3,7 +3,7 @@ import { Conflnk102, Progman35, Setupslt3000 } from '@react95/icons/cjs/';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-    AppBar, Button, Panel,
+    Button, Panel,
     ColorInput, Divider, List,
     ListItem, Toolbar
 } from 'react95';

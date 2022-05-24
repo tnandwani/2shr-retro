@@ -142,7 +142,12 @@ class Snake extends Component {
                 <Panel>
                     <div className="mx-5">
                         <h1 className="snakeFont mx-5" > SNAKE</h1>
-                        <h1>{(this.state.snake.length * 10)-10}</h1>
+                        {((this.state.snake.length * 10) - 10 === 0) &&
+                        <h1>Press any arrow key to start</h1>
+                        }
+                        {((this.state.snake.length * 10) - 10 !== 0) &&
+                            <h1>{(this.state.snake.length * 10) - 10}</h1>
+                        }
                     </div>
 
                 </Panel>
@@ -162,18 +167,18 @@ class Snake extends Component {
                     <div className="m-2 mx-5">
 
                         <Button onClick={() => { this.buttonDirection(UP) }} style={{ margin: '5px', padding: '20px' }}>
-                            UP
+                            ⬆️
                         </Button>
                         <div className="d-flex">
                             <Button onClick={() => { this.buttonDirection(LEFT) }} style={{ margin: '5px', padding: '20px' }}>
-                                Left
+                                ⬅️
                             </Button>
                             <Button onClick={() => { this.buttonDirection(RIGHT) }} style={{ margin: '5px', padding: '20px' }}>
-                                Right
+                                ➡️
                             </Button>
                         </div>
                         <Button onClick={() => { this.buttonDirection(DOWN) }} style={{ margin: '5px', padding: '20px' }}>
-                            DOWN
+                            ⬇️
                         </Button>
                     </div>
                 </Panel>

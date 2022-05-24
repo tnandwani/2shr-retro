@@ -2,8 +2,7 @@ import {
     Window,
     WindowContent,
     WindowHeader,
-    Button,
-    Panel
+    Button
 } from 'react95';
 
 import Snake from '../components/Snake'
