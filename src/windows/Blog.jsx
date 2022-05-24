@@ -3,9 +3,10 @@ import {
     WindowContent,
     WindowHeader,
     Button,
-  
+    Panel
 } from 'react95';
 
+import Snake from '../components/Snake'
 
 import { updateWindow } from '../redux/slices/interfaceSlice'
 import { useDispatch } from 'react-redux';
@@ -25,14 +26,16 @@ export const Blog = (props) => {
                 </Button>
 
             </WindowHeader>
-            
 
-            <WindowContent>
+            <div className='w-100'>
+                <WindowContent>
+
+                    <Snake />
 
 
+                </WindowContent>
+            </div>
 
-
-            </WindowContent>
 
         </Window>
     );
