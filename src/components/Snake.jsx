@@ -1,9 +1,9 @@
 import React, { Component } from "react";
+import { useSelector } from "react-redux";
 import { Panel, Button } from "react95";
-import '../brain'
 import { setHighScore } from "../brain";
+import { setScoreState } from "../redux/slices/interfaceSlice";
 import store from "../redux/store";
-
 
 const HEIGHT = 10;
 const WIDTH = 10;
@@ -27,31 +27,38 @@ const emptyRows = () => [...Array(WIDTH)].map((_) => [...Array(HEIGHT)].map((_) 
 const increaseSpeed = (speed) => speed - 10 * (speed > 10)
 
 
+
+
 const initialState = {
     rows: emptyRows(),
     snake: [getRandom()],
     food: getRandom(),
     direction: STOP,
     speed: 150,
-    highscore: store.getState().interface.highscore
 }
 
-class Snake extends Component {
+let compHighScore;
+
+export function ReduxHighScore() {
+
+    const reduxScore = useSelector((state) => state.interface.highscore);
+    compHighScore = reduxScore;
+    return (reduxScore)
+}
+
+
+ class Snake extends Component {
 
     constructor() {
         super();
         this.state = initialState;
-
+ 
     }
 
     componentDidMount() {
         setInterval(this.moveSnake, this.state.speed);
         document.onkeydown = this.changeDirection;
-        this.setState({
-            highscore: store.getState().interface.highscore
-        });
-
-
+       
     }
 
     componentDidUpdate() {
@@ -113,11 +120,12 @@ class Snake extends Component {
                 let newScore = snake.length * 10
 
                 // check if new high score
-                if (this.state.highscore < newScore ) {
+                if (compHighScore < newScore) {
                     // new high score
                     alert(`NEW HIGH SCORE: ${newScore}`)
-
+                    store.dispatch(setScoreState(newScore))
                     setHighScore(newScore)
+
                 }
                 else {
                     alert(`game over: ${newScore}`)
@@ -185,7 +193,7 @@ class Snake extends Component {
                 <Panel>
                     <div className="mx-5">
                         <h1 className="snakeFont mx-5" >SNAKE </h1>
-                        <h1>GLOBAL HIGH SCORE: <span>{this.state.highscore}</span></h1>
+                        <h1>GLOBAL HIGH SCORE: <span><ReduxHighScore/></span></h1>
 
                         {((this.state.direction) === STOP) &&
                             <h1>~ Press any arrow key to start ~</h1>
@@ -238,5 +246,4 @@ class Snake extends Component {
         )
     }
 }
-
 export default Snake;

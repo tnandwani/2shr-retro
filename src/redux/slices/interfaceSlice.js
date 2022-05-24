@@ -12,7 +12,7 @@ export const interfaceSlice = createSlice({
         textColor: '#fff',
         tooltip: "That does not work",
         artist: 'https://open.spotify.com/embed/artist/3TVXtAsR1Inumwj472S9r4?utm_source=generator',
-        highscore: 0
+        highscore: 0,
     },
     reducers: {
         updateWindow: (state, action) => {
@@ -33,7 +33,7 @@ export const interfaceSlice = createSlice({
             const randomWords = [
                 "This doesn't work",
                 "Not this one either",
-                "Nope",
+                "Nope- fake button",
                 "Wrong Again",
                 "Almost had it",
                 "That one looked real",
@@ -43,11 +43,12 @@ export const interfaceSlice = createSlice({
             state.tooltip = randomWords[(Math.floor(Math.random() * randomWords.length)) - 1];
         },
         changeArtist: (state, action) => {
-           state.artist = action.payload;
+            state.artist = action.payload;
         },
         setScoreState: (state, action) => {
-             state.highscore = action.payload;
-         },
+            console.log(action.payload)
+            state.highscore = action.payload;
+        },
 
     },
 })

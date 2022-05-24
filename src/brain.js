@@ -29,6 +29,8 @@ export async function setHighScore(newScore) {
   await setDoc(doc(db, "snake", "score"), {score: newScore});
 }
 
+
+ 
 export async function getHighScore(){
     const docRef = doc(db, "snake", "score");
     const docSnap = await getDoc(docRef);
@@ -36,10 +38,12 @@ export async function getHighScore(){
     if (docSnap.exists()) {
         console.log("Document data:", docSnap.data());
         store.dispatch(setScoreState(docSnap.data().score))
+        return (docSnap.data().score)
         
     } else {
         // doc.data() will be undefined in this case
         console.log("No such document!");
+        return (0)
     }
 }
 
