@@ -40,6 +40,7 @@ class Snake extends Component {
     componentDidMount() {
         setInterval(this.moveSnake, this.state.speed);
         document.onkeydown = this.changeDirection;
+        document.title = "snake-game";
     }
 
     componentDidUpdate() {
@@ -102,7 +103,27 @@ class Snake extends Component {
         }
     }
 
-    buttonDirection = (direction) => {
+    buttonDirection = (newDirection) => {
+        let direction = this.state.direction;
+        switch (newDirection) {
+            case LEFT:
+                direction = (direction === RIGHT) ? RIGHT : LEFT;
+                break;
+            case RIGHT:
+                direction = (direction === LEFT) ? LEFT : RIGHT;
+                break;
+            case UP:
+                direction = (direction === DOWN) ? DOWN : UP;
+                break;
+            case DOWN:
+                direction = (direction === UP) ? UP : DOWN;
+                break;
+            case STOP:
+                direction = STOP;
+                break;
+            default:
+                break;
+        }
         this.setState({
             direction: direction
         });
@@ -141,12 +162,13 @@ class Snake extends Component {
                 <Panel>
                     <div className="mx-5">
                         <h1 className="snakeFont mx-5" > SNAKE</h1>
-                        {((this.state.snake.length * 10) - 10 === 0) &&
+                        {((this.state.direction) === STOP) &&
                         <h1>Press any arrow key to start</h1>
                         }
-                        {((this.state.snake.length * 10) - 10 !== 0) &&
+                        {((this.state.direction) !== STOP) &&
                             <h1>{(this.state.snake.length * 10) - 10}</h1>
                         }
+
                     </div>
 
                 </Panel>

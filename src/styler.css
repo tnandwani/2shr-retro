@@ -43,7 +43,6 @@ body {
 }
 
 .projectModal {
-  width: 90vw;
   height: 80vh;
   transform: translate(-50%, -50%);
   position: fixed;
@@ -80,7 +79,7 @@ body {
 }
 
 .window-small {
-  min-width: 50vw;
+  width: 50vw;
   min-height: 30vh !important;
   transform: translate(-50%, -50%);
   position: fixed;

@@ -23,21 +23,24 @@ export const About = (props) => {
                 </Button>
 
             </WindowHeader>
+            <div className='w-100 text-center'>
 
             <WindowContent>
 
-                <Panel style={{ marginBottom: '10px' }}>
-                    <p className='p-3'>
-                        Hi there! My name is Tushar Nandwani and I like to build things. All types of things: websites, apps, wearable tech, and even robots at one point.
-                    </p>
-                </Panel> 
-                <Panel >
-                    <p className='p-3'>
-                        I am a self taught developer with my degree in finance. This duality has allowed me to build entire products from scratch on my own.
-                    </p>
-                </Panel>
+
+                    <Panel>
+                        <p className='p-3'>
+                            Hi there! My name is Tushar Nandwani and I like to build things. All types of things: websites, apps, wearable tech, and even robots at one point.
+                        </p>
+                    </Panel>
+                    <Panel>
+                        <p className='p-3'>
+                            I am a self taught developer with my degree in finance. This duality has allowed me to build entire products from scratch on my own.
+                        </p>
+                    </Panel>
 
             </WindowContent>
+            </div>
 
         </Window>
     );
