@@ -27,7 +27,7 @@ const initialState = {
     snake: [getRandom()],
     food: getRandom(),
     direction: STOP,
-    speed: 100,
+    speed: 150,
 }
 
 class Snake extends Component {
