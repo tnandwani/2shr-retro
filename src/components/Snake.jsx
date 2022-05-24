@@ -161,7 +161,7 @@ class Snake extends Component {
             <div className="text-center">
                 <Panel>
                     <div className="mx-5">
-                        <h1 className="snakeFont mx-5" > SNAKE</h1>
+                        <h1 className="snakeFont mx-5" >SNAKE </h1>
                         {((this.state.direction) === STOP) &&
                         <h1>Press any arrow key to start</h1>
                         }
@@ -193,6 +193,9 @@ class Snake extends Component {
                         <div className="d-flex">
                             <Button onClick={() => { this.buttonDirection(LEFT) }} style={{ margin: '5px', padding: '20px' }}>
                                 ⬅️
+                            </Button>
+                            <Button onClick={() => { this.buttonDirection(STOP) }} style={{ margin: '5px', padding: '20px' }}>
+                                🐍
                             </Button>
                             <Button onClick={() => { this.buttonDirection(RIGHT) }} style={{ margin: '5px', padding: '20px' }}>
                                 ➡️
