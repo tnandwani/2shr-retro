@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
     Button, Panel,
     ColorInput, Divider, List,
-    ListItem, Toolbar, Anchor
+    ListItem, Toolbar
 } from 'react95';
 import { changeColor } from '../redux/slices/interfaceSlice';
 import ThemeButton from './ThemeButton';
@@ -50,25 +50,19 @@ export default function AppStart() {
                                     zIndex: 1050,
                                 }}
                                 onClick={() => setOpen(false)}>
-                                <ListItem>
-                                    <Anchor href="https://www.github.com/tnandwani/" target='_blank'>
-                                        Github
-                                    </Anchor>
+                                <ListItem onClick={() => { window.open("https://github.com/tnandwani/")}}>
+                                    Githhub
                                     <Setupslt3000 variant="32x32_4" />
                                 </ListItem>
 
-                                <ListItem>
-                                    <Anchor href="https://www.linkedin.com/in/tnandwani/" target='_blank'>
-                                        LinkedIn
-                                    </Anchor>
+                                <ListItem onClick={() => { window.open("https://www.linkedin.com/in/tnandwani/") }}>
+                                    LinkedIn
                                     <Conflnk102 variant="32x32_4" />
 
                                 </ListItem>
                                 <Divider />
-                                <ListItem>
-                                    <Anchor href="mailto:me@tnandwani.com" target='_blank'>
-                                        Email
-                                    </Anchor>
+                                <ListItem onClick={() => { window.open("mailto:someone@yoursite.com") }}>
+                                    Email Me
                                     <Progman35 variant="32x32_4" />
                                 </ListItem>
                             </List>
