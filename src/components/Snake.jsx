@@ -157,8 +157,9 @@ class Snake extends Component {
                 <br />
 
 
+
                 <Panel>
-                    <div className="m-2">
+                    <div className="m-2 mx-5">
 
                         <Button onClick={() => { this.buttonDirection(UP) }} style={{ margin: '5px', padding: '20px' }}>
                             UP
