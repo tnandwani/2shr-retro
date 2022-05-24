@@ -12,7 +12,7 @@ import { updateWindow } from '../redux/slices/interfaceSlice'
 import { useDispatch } from 'react-redux';
 
 
-export const Blog = (props) => {
+export const Games = (props) => {
     const dispatch = useDispatch()
 
 
@@ -20,7 +20,7 @@ export const Blog = (props) => {
     return (
         <Window className='window-small pattern-dots'>
             <WindowHeader className='window-header'>
-                <span>Blog</span>
+                <span>Games</span>
                 <Button onClick={() => { dispatch(updateWindow('none')) }}>
                     <span>x</span>
                 </Button>

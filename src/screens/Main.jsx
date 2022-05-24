@@ -24,12 +24,12 @@ import wavbandsLogo from '../assets/retro-wavbands.png'
 import { About } from '../windows/About';
 import { Skills } from '../windows/Skills';
 import { Music } from '../windows/Music';
-import { Blog } from '../windows/Blog';
+import { Games } from '../windows/Games';
 
 import AppStart from '../components/AppStart'
 
 
-import { Msnstart100, Url1103, Progman24, CdMusic } from '@react95/icons/cjs/';
+import { Msnstart100, Joy102, Progman24, CdMusic } from '@react95/icons/cjs/';
 
 
 
@@ -85,8 +85,8 @@ export default function Main() {
 
                             </div>
                             <div className='mb-2'>
-                                <Url1103 onClick={() => { dispatch(updateWindow('Blog')) }} variant="32x32_4" />
-                                <p className='iconText'>Blog</p>
+                                <Joy102 onClick={() => { dispatch(updateWindow('Blog')) }} variant="32x32_4" />
+                                <p className='iconText'>Games</p>
 
                             </div>
                             <div className='mb-2'>
@@ -125,7 +125,7 @@ export default function Main() {
                             <Skills />
                         }
                         {choice === 'Blog' &&
-                            <Blog />
+                            <Games />
                         }
                         {choice === 'Music' &&
                             <Music />
