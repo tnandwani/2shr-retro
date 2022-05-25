@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { useSelector } from "react-redux";
-import { Panel, Button } from "react95";
+import { Panel, Button, Counter } from "react95";
 import { setHighScore } from "../brain";
 import { setScoreState } from "../redux/slices/interfaceSlice";
 import store from "../redux/store";
@@ -47,18 +47,18 @@ export function ReduxHighScore() {
 }
 
 
- class Snake extends Component {
+class Snake extends Component {
 
     constructor() {
         super();
         this.state = initialState;
- 
+
     }
 
     componentDidMount() {
         setInterval(this.moveSnake, this.state.speed);
         document.onkeydown = this.changeDirection;
-       
+
     }
 
     componentDidUpdate() {
@@ -193,16 +193,14 @@ export function ReduxHighScore() {
                 <Panel>
                     <div className="mx-5">
                         <h1 className="snakeFont mx-5" >SNAKE </h1>
-                        <h1>GLOBAL HIGH SCORE: <span><ReduxHighScore/></span></h1>
+                        <h1>GLOBAL HIGH SCORE: <span><ReduxHighScore /></span></h1>
 
                         {((this.state.direction) === STOP) &&
                             <h1>~ Press any arrow key to start ~</h1>
                         }
                         {((this.state.direction) !== STOP) &&
-                            <>
-                                <h1>{(this.state.snake.length * 10)}</h1>
+                            <Counter minLength={4} value={(this.state.snake.length * 10)}/>
 
-                            </>
                         }
 
                     </div>
