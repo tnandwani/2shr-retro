@@ -3,13 +3,13 @@ import {
     WindowContent,
     WindowHeader,
     Button,
-
+    Avatar,
     Panel
 } from 'react95';
 
 import { updateWindow } from '../redux/slices/interfaceSlice'
 import { useDispatch } from 'react-redux';
-
+import myLogo from '.././assets/squarelogo.png'
 
 export const About = (props) => {
     const dispatch = useDispatch()
@@ -23,10 +23,13 @@ export const About = (props) => {
                 </Button>
 
             </WindowHeader>
-            <div className='w-100 text-center'>
+            <div className='text-center'>
 
-            <WindowContent>
 
+                <WindowContent>
+                    <div className='mb-3 mt-1'>
+                        <Avatar style = {{display: 'block', marginLeft: 'auto', marginRight: 'auto'}}size={100} src={myLogo} />
+                    </div>
 
                     <Panel>
                         <p className='p-3'>
@@ -41,7 +44,7 @@ export const About = (props) => {
                         </p>
                     </Panel>
 
-            </WindowContent>
+                </WindowContent>
             </div>
 
         </Window>

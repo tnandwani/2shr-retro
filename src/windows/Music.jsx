@@ -21,8 +21,11 @@ export const Music = (props) => {
     const dispatch = useDispatch()
     const artistChoice = useSelector((state) => state.interface.artist);
     const [activeTab, setTab] = useState(0);
+    
 
     const handleChange = (e, value) => setTab(value);
+
+
 
     return (
         <Window className='window-small pattern-dots'>
@@ -44,6 +47,7 @@ export const Music = (props) => {
                     {activeTab === 0 && (
                         <div>
                             <ArtistTable />
+                            
             
                             <Panel style = {{width: '100%', padding: '10px', marginTop: '10px'}}>
                                 <iframe title='drake' src={artistChoice} width="100%" height='80' allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
