@@ -1,8 +1,18 @@
-import { Window, WindowContent, WindowHeader, Button, Panel, Fieldset, Radio, Cutout, Toolbar, Tooltip } from 'react95';
+import {
+    Window,
+    WindowContent,
+    WindowHeader,
+    Button,
+    Panel,
+    Fieldset,
+    Radio,
+    Cutout,
+    Toolbar,
+} from 'react95';
 
 
-import { getTooltip, updateWindow } from '../../redux/slices/interfaceSlice'
-import { useDispatch, useSelector } from 'react-redux';
+import { updateWindow } from '../../redux/slices/interfaceSlice';
+import { useDispatch } from 'react-redux';
 
 
 import discoHeader from './wordart/icondisco.png';

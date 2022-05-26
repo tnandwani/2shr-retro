@@ -36,7 +36,7 @@ if (window.location.hostname === 'localhost') {
     shouldLoad = false;
 }
 
-const themePack = [fxDev, lilac, matrix, aiee, lilac, fxDev, darkTeal, tokyoDark, highContrast, modernDark, polarized, powerShell, solarizedLight, toner, vistaesqueMidnight]
+const themePack = [modernDark, matrix, original, fxDev, lilac,  aiee, lilac, fxDev, darkTeal, tokyoDark, highContrast, polarized, powerShell, solarizedLight, toner, vistaesqueMidnight]
 
 export default function App() {
 
