@@ -196,7 +196,7 @@ class Snake extends Component {
                         <h1>GLOBAL HIGH SCORE: <span><ReduxHighScore /></span></h1>
 
                         {((this.state.direction) === STOP) &&
-                            <h1>~ Press any arrow key to start ~</h1>
+                            <h1>~ Press any key to start ~</h1>
                         }
                         {((this.state.direction) !== STOP) &&
                             <h1 className="snakeScore">{(this.state.snake.length * 10)} </h1>
@@ -217,29 +217,28 @@ class Snake extends Component {
                 <br />
 
 
-
-                <Panel>
-                    <div className="m-2 mx-5">
-
-                        <Button onClick={() => { this.buttonDirection(UP) }} >
-                            ⬆️
+                <div className="row m-1">
+                    <Panel className= 'p-2'>
+                        <Button className='px-5' onClick={() => { this.buttonDirection(UP) }} >
+                            ⬆
                         </Button>
-                        <div className="d-flex">
-                            <Button onClick={() => { this.buttonDirection(LEFT) }}>
-                                ⬅️
+                        <div className="d-flex justify-content-center">
+                            <Button className='px-5' onClick={() => { this.buttonDirection(LEFT) }}>
+                                ⬅
                             </Button>
                             <Button onClick={() => { this.buttonDirection(STOP) }}>
                                 🐍
                             </Button>
-                            <Button onClick={() => { this.buttonDirection(RIGHT) }}>
-                                ➡️
+                            <Button className='px-5' onClick={() => { this.buttonDirection(RIGHT) }}>
+                                ⮕
                             </Button>
                         </div>
-                        <Button onClick={() => { this.buttonDirection(DOWN) }}>
-                            ⬇️
+                        <Button className='px-5' onClick={() => { this.buttonDirection(DOWN) }}>
+                            ⬇
                         </Button>
-                    </div>
-                </Panel>
+                    </Panel>
+                </div>
+
             </div>
         )
     }

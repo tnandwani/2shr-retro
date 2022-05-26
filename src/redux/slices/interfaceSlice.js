@@ -6,7 +6,7 @@ import {
 export const interfaceSlice = createSlice({
     name: 'interfaceSlice',
     initialState: {
-        window: 'none',
+        window: 'About',
         theme: 0,
         bgColor: '#000',
         textColor: '#fff',

@@ -52,10 +52,14 @@ export default function Timeline() {
                     step={1}
                     defaultValue={year}
                     onChange={(value) => {
+                    
                         if (value.target.ariaValueNow) {
                             setYear(value.target.ariaValueNow)
                         }
+                        
+                        
                     }}
+                   
                     marks={[
                         { value: 2013, label: '2013' },
                         { value: 2014, label: '2014' },
