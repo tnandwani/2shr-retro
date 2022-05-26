@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { useSelector } from "react-redux";
-import { Panel, Button, Counter } from "react95";
+import { Panel, Button } from "react95";
 import { setHighScore } from "../brain";
 import { setScoreState } from "../redux/slices/interfaceSlice";
 import store from "../redux/store";
