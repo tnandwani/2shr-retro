@@ -1,16 +1,16 @@
-import { Window, WindowContent, WindowHeader, Button, Panel, Fieldset, Radio, Cutout } from 'react95';
+import { Window, WindowContent, WindowHeader, Button, Panel, Fieldset, Radio, Cutout, Toolbar, Tooltip } from 'react95';
 
 
-import { updateWindow } from '../../redux/slices/interfaceSlice'
-import { useDispatch } from 'react-redux';
-import DisabledToolbar from '../../components/DisabledToolbar';
+import { getTooltip, updateWindow } from '../../redux/slices/interfaceSlice'
+import { useDispatch, useSelector } from 'react-redux';
 
 import augmaHeader from './wordart/iconaugma.png'
 
 export const AugmaTab = (props) => {
     const dispatch = useDispatch()
+    const toolText = useSelector((state) => state.interface.tooltip);
 
-
+    const toolkit = ['XCode', 'Firebase', "Apple ARKit", "Swift", "Photoshop"]
 
     return (
         <Window className='window pattern-dots'>
@@ -22,49 +22,53 @@ export const AugmaTab = (props) => {
 
             </WindowHeader>
 
-            <DisabledToolbar />
+            <Toolbar>
+                <Tooltip text={toolText} onMouseEnter={() => { dispatch(getTooltip()) }} enterDelay={100} leaveDelay={200} className= 'text-dark'>
+                    <Button variant='menu' size='sm'>
+                        File
+                    </Button>
+                    <Button variant='menu' size='sm'>
+                        Edit
+                    </Button>
+
+                </Tooltip>
+                <Button variant='menu' size='sm' onClick={() => { window.open('https://github.com/tnandwani/augma-app') }}>
+                    View Code
+                </Button>
+                <Tooltip text={'Email for demo Request'} enterDelay={100} leaveDelay={200} className= 'text-dark'>
+                    <Button disabled variant='menu' size='sm' >
+                        Visit Site
+                    </Button>
+                </Tooltip>
+               
+            </Toolbar>
             <WindowContent>
                 <div className='w-100 mb-3'>
                     <img className='wordArt' src={augmaHeader} alt='augma' />
                 </div>
                 <Panel >
-                    <Cutout className= 'cutoutMax'>
+                    <Cutout className='cutoutMax'>
                         <div className='container'>
 
                             <div className='row g-3 py-3'>
-                             
+
                                 <div className='col-lg-3 text-left'>
                                     <Panel style={{ width: '100%' }}>
                                         <WindowContent>
-                                            <Fieldset label='Made with'>
-                                                <Radio
-                                                    checked={true}
-                                                    value='Pear'
-                                                    label='🍐 Pear'
-                                                    name='fruits'
-                                                />
-                                                <br />
-                                                <Radio
-                                                    checked={true}
-                                                    value='Orange'
-                                                    label='🍊 Orange'
-                                                    name='fruits'
-                                                />
-                                                <br />
-                                                <Radio
-                                                    checked={true}
-                                                    value='Kiwi'
-                                                    label='🥝 Kiwi'
-                                                    name='fruits'
-                                                />
-                                                <br />
-                                                <Radio
-                                                    defaultChecked
-                                                    value='Grape'
-                                                    label='🍇 Grape'
-                                                    name='fruits'
+                                            <Fieldset label='Made with...'>
+                                                {toolkit.map((tool) =>
+                                                    <>
+                                                        <Radio
+                                                            checked={true}
+                                                            value={tool}
+                                                            label={tool}
+                                                            name={tool}
+                                                        />
+                                                        <br />
+                                                    </>
+                                                )}
 
-                                                />
+
                                             </Fieldset>
                                         </WindowContent>
                                     </Panel>
@@ -84,15 +88,15 @@ export const AugmaTab = (props) => {
                                             </p>
                                         </Panel>
                                     </div>
-                                  
+
                                 </div>
                             </div>
                         </div>
-                       
+
                     </Cutout>
 
                 </Panel>
-            
+
 
 
             </WindowContent>

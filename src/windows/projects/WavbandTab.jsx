@@ -1,14 +1,16 @@
-import { Window, WindowContent, WindowHeader, Button, Panel, Fieldset, Radio, Cutout } from 'react95';
+import { Window, WindowContent, WindowHeader, Button, Panel, Fieldset, Radio, Cutout, Toolbar, Tooltip } from 'react95';
 
 
-import { updateWindow } from '../../redux/slices/interfaceSlice'
-import { useDispatch } from 'react-redux';
-import DisabledToolbar from '../../components/DisabledToolbar';
+import { getTooltip, updateWindow } from '../../redux/slices/interfaceSlice'
+import { useDispatch, useSelector } from 'react-redux';
 import wavbandsHeader from './wordart/iconwavbands.png';
 
 
 export const WavbandTab = (props) => {
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
+    const toolText = useSelector((state) => state.interface.tooltip);
+
+    const toolkit = ['PCB Design', 'AutoCAD', "3D Printing", "International Manufacturers", "Amazong FBA"]
 
 
 
@@ -21,8 +23,23 @@ export const WavbandTab = (props) => {
                 </Button>
 
             </WindowHeader>
-            <DisabledToolbar visit={'https://www.kickstarter.com/projects/1288271757/wav-bands-youll-never-need-an-aux-cord-again'} />
+            <Toolbar>
+                <Tooltip text={toolText} onMouseEnter={() => { dispatch(getTooltip()) }} enterDelay={100} leaveDelay={200} className= 'text-dark'>
+                    <Button variant='menu' size='sm'>
+                        File
+                    </Button>
+                    <Button variant='menu' size='sm'>
+                        Edit
+                    </Button>
 
+                </Tooltip>
+                <Button variant='menu' size='sm' onClick={() => { window.open('https://github.com/tnandwani/disco-music') }}>
+                    View Code
+                </Button>
+                <Button variant='menu' size='sm' onClick={() => { window.open('https://discolive.app/') }}>
+                    Visit Site
+                </Button>
+            </Toolbar>
 
             <WindowContent>
                 <div className='w-100 mb-3'>
@@ -37,35 +54,18 @@ export const WavbandTab = (props) => {
                                 <div className='col-lg-3 text-left'>
                                     <Panel style={{ width: '100%' }}>
                                         <WindowContent>
-                                            <Fieldset label='Made with'>
-                                                <Radio
-                                                    checked={true}
-                                                    value='Pear'
-                                                    label='🍐 Pear'
-                                                    name='fruits'
-                                                />
-                                                <br />
-                                                <Radio
-                                                    checked={true}
-                                                    value='Orange'
-                                                    label='🍊 Orange'
-                                                    name='fruits'
-                                                />
-                                                <br />
-                                                <Radio
-                                                    checked={true}
-                                                    value='Kiwi'
-                                                    label='🥝 Kiwi'
-                                                    name='fruits'
-                                                />
-                                                <br />
-                                                <Radio
-                                                    defaultChecked
-                                                    value='Grape'
-                                                    label='🍇 Grape'
-                                                    name='fruits'
-
-                                                />
+                                            <Fieldset label='Made with...'>
+                                                {toolkit.map((tool) =>
+                                                    <>
+                                                        <Radio
+                                                            checked={true}
+                                                            value={tool}
+                                                            label={tool}
+                                                            name={tool}
+                                                        />
+                                                        <br />
+                                                    </>
+                                                )}
                                             </Fieldset>
                                         </WindowContent>
                                     </Panel>

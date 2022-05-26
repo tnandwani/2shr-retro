@@ -13,7 +13,7 @@ export default function DisabledToolbar(props) {
 
   return (
     <Toolbar>
-      <Tooltip text={toolText} onMouseEnter={() => { dispatch(getTooltip()) }} enterDelay={100} leaveDelay={200}>
+      <Tooltip text={toolText} onMouseEnter={() => { dispatch(getTooltip()) }} enterDelay={100} leaveDelay={200} className= 'text-dark'>
         <Button variant='menu' size='sm'>
           File
         </Button>

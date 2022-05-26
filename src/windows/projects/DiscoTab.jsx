@@ -1,17 +1,17 @@
-import { Window, WindowContent, WindowHeader, Button, Panel, Fieldset, Radio, Cutout } from 'react95';
+import { Window, WindowContent, WindowHeader, Button, Panel, Fieldset, Radio, Cutout, Toolbar, Tooltip } from 'react95';
 
 
-import { updateWindow } from '../../redux/slices/interfaceSlice'
-import { useDispatch } from 'react-redux';
-
-import DisabledToolbar from '../../components/DisabledToolbar';
+import { getTooltip, updateWindow } from '../../redux/slices/interfaceSlice'
+import { useDispatch, useSelector } from 'react-redux';
 
 
 import discoHeader from './wordart/icondisco.png';
 
 export const DiscoTab = (props) => {
     const dispatch = useDispatch()
+    const toolText = useSelector((state) => state.interface.tooltip);
 
+    const toolkit = ['React', 'Firebase Realtime', 'Google Cloud', 'Heroku', 'Material UI']
 
 
     return (
@@ -23,7 +23,26 @@ export const DiscoTab = (props) => {
                 </Button>
 
             </WindowHeader>
-            <DisabledToolbar github={'https://github.com/tnandwani/disco-music'} visit={'https://discolive.app/'} />
+            <Toolbar>
+                <Tooltip text={toolText} onMouseEnter={() => { dispatch(getTooltip()) }} enterDelay={100} leaveDelay={200} className= 'text-dark'>
+                    <Button variant='menu' size='sm'>
+                        File
+                    </Button>
+                    <Button variant='menu' size='sm'>
+                        Edit
+                    </Button>
+
+                </Tooltip>
+                <Button variant='menu' size='sm' onClick={() => { window.open('https://github.com/tnandwani/disco-music') }}>
+                    View Code
+                </Button>
+                <Button variant='menu' size='sm' onClick={() => { window.open('https://discolive.app/') }}>
+                    Landing Page
+                </Button>
+                <Button variant='menu' size='sm' onClick={() => { window.open('https://disco-music.herokuapp.com/') }}>
+                    View OLD Prototype
+                </Button>
+            </Toolbar>
 
 
             <WindowContent>
@@ -39,35 +58,18 @@ export const DiscoTab = (props) => {
                                 <div className='col-lg-3 text-left'>
                                     <Panel style={{ width: '100%' }}>
                                         <WindowContent>
-                                            <Fieldset label='Made with'>
-                                                <Radio
-                                                    checked={true}
-                                                    value='Pear'
-                                                    label='🍐 Pear'
-                                                    name='fruits'
-                                                />
-                                                <br />
-                                                <Radio
-                                                    checked={true}
-                                                    value='Orange'
-                                                    label='🍊 Orange'
-                                                    name='fruits'
-                                                />
-                                                <br />
-                                                <Radio
-                                                    checked={true}
-                                                    value='Kiwi'
-                                                    label='🥝 Kiwi'
-                                                    name='fruits'
-                                                />
-                                                <br />
-                                                <Radio
-                                                    defaultChecked
-                                                    value='Grape'
-                                                    label='🍇 Grape'
-                                                    name='fruits'
-
-                                                />
+                                            <Fieldset label='Made with...'>
+                                                {toolkit.map((tool) =>
+                                                    <>
+                                                        <Radio
+                                                            checked={true}
+                                                            value={tool}
+                                                            label={tool}
+                                                            name={tool}
+                                                        />
+                                                        <br />
+                                                    </>
+                                                )}
                                             </Fieldset>
                                         </WindowContent>
                                     </Panel>

@@ -40,7 +40,7 @@ export const interfaceSlice = createSlice({
                 "Gotcha Again",
                 "I'll take that as a compliment"
             ]
-            state.tooltip = randomWords[(Math.floor(Math.random() * randomWords.length)) - 1];
+            state.tooltip = randomWords[(Math.floor(Math.random() * randomWords.length))];
         },
         changeArtist: (state, action) => {
             state.artist = action.payload;
