@@ -8,7 +8,6 @@ import augmaHeader from './wordart/iconaugma.png'
 
 export const AugmaTab = (props) => {
     const dispatch = useDispatch()
-    const toolText = useSelector((state) => state.interface.tooltip);
 
     const toolkit = ['XCode', 'Firebase', "Apple ARKit", "Swift", "Photoshop"]
 
@@ -23,15 +22,7 @@ export const AugmaTab = (props) => {
             </WindowHeader>
 
             <Toolbar>
-                <Tooltip text={toolText} onMouseEnter={() => { dispatch(getTooltip()) }} enterDelay={100} leaveDelay={200} className= 'text-dark'>
-                    <Button variant='menu' size='sm'>
-                        File
-                    </Button>
-                    <Button variant='menu' size='sm'>
-                        Edit
-                    </Button>
-
-                </Tooltip>
+              
                 <Button variant='menu' size='sm' onClick={() => { window.open('https://github.com/tnandwani/augma-app') }}>
                     View Code
                 </Button>

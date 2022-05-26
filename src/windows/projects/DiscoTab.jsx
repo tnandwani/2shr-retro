@@ -9,7 +9,6 @@ import discoHeader from './wordart/icondisco.png';
 
 export const DiscoTab = (props) => {
     const dispatch = useDispatch()
-    const toolText = useSelector((state) => state.interface.tooltip);
 
     const toolkit = ['React', 'Firebase Realtime', 'Google Cloud', 'Heroku', 'Material UI']
 
@@ -24,23 +23,15 @@ export const DiscoTab = (props) => {
 
             </WindowHeader>
             <Toolbar>
-                <Tooltip text={toolText} onMouseEnter={() => { dispatch(getTooltip()) }} enterDelay={100} leaveDelay={200} className= 'text-dark'>
-                    <Button variant='menu' size='sm'>
-                        File
-                    </Button>
-                    <Button variant='menu' size='sm'>
-                        Edit
-                    </Button>
-
-                </Tooltip>
+         
                 <Button variant='menu' size='sm' onClick={() => { window.open('https://github.com/tnandwani/disco-music') }}>
                     View Code
                 </Button>
                 <Button variant='menu' size='sm' onClick={() => { window.open('https://discolive.app/') }}>
-                    Landing Page
+                    View Site
                 </Button>
                 <Button variant='menu' size='sm' onClick={() => { window.open('https://disco-music.herokuapp.com/') }}>
-                    View OLD Prototype
+                    Old Beta
                 </Button>
             </Toolbar>
 

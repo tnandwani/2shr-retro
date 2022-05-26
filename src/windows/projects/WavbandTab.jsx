@@ -8,7 +8,6 @@ import wavbandsHeader from './wordart/iconwavbands.png';
 
 export const WavbandTab = (props) => {
     const dispatch = useDispatch();
-    const toolText = useSelector((state) => state.interface.tooltip);
 
     const toolkit = ['PCB Design', 'AutoCAD', "3D Printing", "International Manufacturers", "Amazong FBA"]
 
@@ -24,20 +23,17 @@ export const WavbandTab = (props) => {
 
             </WindowHeader>
             <Toolbar>
-                <Tooltip text={toolText} onMouseEnter={() => { dispatch(getTooltip()) }} enterDelay={100} leaveDelay={200} className= 'text-dark'>
-                    <Button variant='menu' size='sm'>
-                        File
+          
+                <Tooltip text={'No code for this one'} enterDelay={100} leaveDelay={200} className='text-dark'>
+                    <Button disabled variant='menu' size='sm' >
+                        View Code
                     </Button>
-                    <Button variant='menu' size='sm'>
-                        Edit
-                    </Button>
-
                 </Tooltip>
-                <Button variant='menu' size='sm' onClick={() => { window.open('https://github.com/tnandwani/disco-music') }}>
-                    View Code
-                </Button>
-                <Button variant='menu' size='sm' onClick={() => { window.open('https://discolive.app/') }}>
+                <Button variant='menu' size='sm' onClick={() => { window.open('https://wavbands.com/') }}>
                     Visit Site
+                </Button>
+                <Button variant='menu' size='sm' onClick={() => { window.open('https://wavbands.com/') }}>
+                    Kickstarter
                 </Button>
             </Toolbar>
 

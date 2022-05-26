@@ -9,7 +9,6 @@ import dogwatchHeader from './wordart/icondogwatch.png';
 
 export const DogWatchTab = (props) => {
     const dispatch = useDispatch()
-    const toolText = useSelector((state) => state.interface.tooltip);
 
     const toolkit = ['Expo', 'React Native', 'Redux', 'Firestore', 'Google Maps', 'Sentry']
 
@@ -24,20 +23,15 @@ export const DogWatchTab = (props) => {
 
             </WindowHeader>
             <Toolbar>
-                <Tooltip text={toolText} onMouseEnter={() => { dispatch(getTooltip()) }} enterDelay={100} leaveDelay={200} className= 'text-dark'>
-                    <Button variant='menu' size='sm'>
-                        File
-                    </Button>
-                    <Button variant='menu' size='sm'>
-                        Edit
-                    </Button>
-
-                </Tooltip>
-                <Button variant='menu' size='sm' onClick={() => { window.open('https://github.com/tnandwani/disco-music') }}>
+       
+                <Button variant='menu' size='sm' onClick={() => { window.open('https://github.com/tnandwani/dog-watch') }}>
                     View Code
                 </Button>
-                <Button variant='menu' size='sm' onClick={() => { window.open('https://discolive.app/') }}>
+                <Button variant='menu' size='sm' onClick={() => { window.open('https://dogwatch.app/') }}>
                     Visit Site
+                </Button>
+                <Button variant='menu' size='sm' onClick={() => { window.open('https://dogwatch.page.link/join') }}>
+                    Get App
                 </Button>
             </Toolbar>
 
@@ -81,9 +75,15 @@ export const DogWatchTab = (props) => {
 
 
                                         <Panel variant={'inside'}>
-                                            <p className='m-3'>
-                                                Available on all platforms ( Web | Android | iOS )
-                                            </p>
+                                            <div className='container g-3 p-3'>
+
+                                                <p className='mb-3'>
+                                                    Available on all platforms ( Web | Android | iOS )
+                                                </p>
+                                                <Button primary size='md' onClick={() => { window.open('https://dogwatch.page.link/join') }}>
+                                                    Download App
+                                                </Button>
+                                            </div>
                                         </Panel>
                                     </div>
 
