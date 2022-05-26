@@ -199,7 +199,7 @@ class Snake extends Component {
                             <h1>~ Press any arrow key to start ~</h1>
                         }
                         {((this.state.direction) !== STOP) &&
-                            <Counter minLength={4} value={(this.state.snake.length * 10)}/>
+                            <h1>{(this.state.snake.length * 10)} </h1>
 
                         }
 
