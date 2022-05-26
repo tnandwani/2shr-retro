@@ -30,9 +30,9 @@ export default function AppStart() {
     }, []);
     return (
         <div className='stickyFooter'>
-            <Panel style= {{width: '100%'}}>
+            <Panel style={{ width: '100%' }}>
 
-            
+
                 <Toolbar style={{ justifyContent: 'space-between' }}>
                     <div style={{ position: 'relative', display: 'inline-block' }}>
                         <Button onClick={() => setOpen(!open)} active={open} style={{ fontWeight: 'bold' }}>
@@ -50,7 +50,7 @@ export default function AppStart() {
                                     zIndex: 1050,
                                 }}
                                 onClick={() => setOpen(false)}>
-                                <ListItem onClick={() => { window.open("https://github.com/tnandwani/")}}>
+                                <ListItem onClick={() => { window.open("https://github.com/tnandwani/") }}>
                                     Githhub
                                     <Setupslt3000 variant="32x32_4" />
                                 </ListItem>
@@ -74,7 +74,11 @@ export default function AppStart() {
                             <ThemeButton />
                         </div>
                         <div>
-                            <ColorInput variant='flat' defaultValue={bgColor} onChange={(value) => { dispatch(changeColor(value.target.value)) }} />
+                            <ColorInput variant='flat' defaultValue={bgColor} onChange={(value) => {
+                                dispatch(changeColor(value.target.value));
+                                window.document.body.style.backgroundColor = value.target.value
+                            }
+                            } />
                         </div>
                         <div className='d-none d-lg-block .d-xl-none'>
                             <p className='mt-1 mx-2 '>{date.toLocaleTimeString()}</p>
@@ -83,6 +87,6 @@ export default function AppStart() {
                 </Toolbar>
             </Panel>
         </div>
-        
+
     )
 }
