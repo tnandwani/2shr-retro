@@ -1,8 +1,8 @@
 import { Window, WindowContent, WindowHeader, Button, Panel, Fieldset, Radio, Cutout, Toolbar, Tooltip } from 'react95';
 
 
-import { getTooltip, updateWindow } from '../../redux/slices/interfaceSlice'
-import { useDispatch, useSelector } from 'react-redux';
+import { updateWindow } from '../../redux/slices/interfaceSlice';
+import { useDispatch } from 'react-redux';
 
 import augmaHeader from './wordart/iconaugma.png'
 
@@ -82,6 +82,7 @@ export const AugmaTab = (props) => {
 
                                 </div>
                             </div>
+                           
                         </div>
 
                     </Cutout>

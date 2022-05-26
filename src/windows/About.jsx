@@ -1,14 +1,4 @@
-import {
-    Window,
-    WindowContent,
-    WindowHeader,
-    Button,
-    Avatar,
-    Panel,
-    Slider,
-    Cutout,
-
-} from 'react95';
+import { Window, WindowContent, WindowHeader, Button, Avatar, Panel, Cutout } from 'react95';
 import Timeline from '../components/Timeline'
 import { updateWindow } from '../redux/slices/interfaceSlice'
 import { useDispatch } from 'react-redux';

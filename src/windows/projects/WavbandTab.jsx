@@ -1,8 +1,8 @@
 import { Window, WindowContent, WindowHeader, Button, Panel, Fieldset, Radio, Cutout, Toolbar, Tooltip } from 'react95';
 
 
-import { getTooltip, updateWindow } from '../../redux/slices/interfaceSlice'
-import { useDispatch, useSelector } from 'react-redux';
+import { updateWindow } from '../../redux/slices/interfaceSlice';
+import { useDispatch } from 'react-redux';
 import wavbandsHeader from './wordart/iconwavbands.png';
 
 
@@ -43,7 +43,7 @@ export const WavbandTab = (props) => {
                     <img className='wordArt' src={wavbandsHeader} alt='disco' />
                 </div>
                 <Panel >
-                    <Cutout className='cutoutMax'>
+                    <Cutout className='cutoutTrailer'>
                         <div className='container'>
 
                             <div className='row g-3 py-3'>
@@ -84,6 +84,9 @@ export const WavbandTab = (props) => {
                                     </div>
 
                                 </div>
+                            </div>
+                            <div>
+                                <iframe title='wavbands trailer' width="100%"  src="https://www.youtube.com/embed/AFVg1vvcU_E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
 
