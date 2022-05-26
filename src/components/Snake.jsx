@@ -218,24 +218,17 @@ class Snake extends Component {
 
 
                 <div className="row m-1">
-                    <Panel className= 'p-2'>
-                        <Button className='px-5' onClick={() => { this.buttonDirection(UP) }} >
-                            ⬆
-                        </Button>
-                        <div className="d-flex justify-content-center">
-                            <Button className='px-5' onClick={() => { this.buttonDirection(LEFT) }}>
-                                ⬅
-                            </Button>
-                            <Button onClick={() => { this.buttonDirection(STOP) }}>
-                                🐍
-                            </Button>
-                            <Button className='px-5' onClick={() => { this.buttonDirection(RIGHT) }}>
-                                ⮕
-                            </Button>
+                    <Panel className='py-3' style ={{height: '160px'}}>
+                        <div className='circle'>
+                            <div className='crossCenter'>
+                                <div className='crossTop animation' onClick={() => { this.buttonDirection(UP) }}></div>
+                                <div className='crossBottom' onClick={() => { this.buttonDirection(DOWN) }}></div>
+                                <div className='crossLeft' onClick={() => { this.buttonDirection(LEFT) }}> </div>
+                                <div className='crossRight' onClick={() => { this.buttonDirection(RIGHT) }}></div>
+                                <div className='crossCircle' onClick={() => { this.buttonDirection(STOP) }}></div>
+                            </div>
                         </div>
-                        <Button className='px-5' onClick={() => { this.buttonDirection(DOWN) }}>
-                            ⬇
-                        </Button>
+                   
                     </Panel>
                 </div>
 
