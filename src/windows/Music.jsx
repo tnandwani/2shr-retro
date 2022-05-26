@@ -41,7 +41,7 @@ export const Music = (props) => {
             <WindowContent>
                 <Tabs value={activeTab} onChange={handleChange}>
                     <Tab value={0}>My Top 5</Tab>
-                    <Tab value={1}>Song I helped make</Tab>
+                    <Tab value={1}>I Helped ✋</Tab>
                     <Tab value={2}>Playlist</Tab>
                 </Tabs>
                 <TabBody > 

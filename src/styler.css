@@ -49,15 +49,6 @@ body {
   right: 20px;
 }
 
-.projectModal {
-  height: 80vh;
-  transform: translate(-50%, -50%);
-  position: fixed;
-  left: 50%;
-  top: 45%;
-  z-index: 1050;
-}
-
 .window-header {
   display: flex;
   align-items: center;
@@ -74,9 +65,18 @@ body {
   position: relative;
 }
 
-.window {
-  width: 60vw;
+.projectModal {
   height: 80vh;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  left: 50%;
+  top: 45%;
+  z-index: 1050;
+}
+
+.window {
+  width: auto;
+  height: auto;
   transform: translate(-50%, -50%);
   position: fixed;
   margin-top: 15px;
@@ -86,7 +86,7 @@ body {
 }
 
 .window-small {
-  width: 50vw;
+  width: auto;
   min-height: 30vh !important;
   transform: translate(-50%, -50%);
   position: fixed;
@@ -104,7 +104,7 @@ body {
 }
 
 .window-game {
-  min-width: 50vw;
+  min-width: auto;
   min-height: 30vh !important;
   transform: translate(-50%, -50%);
   position: fixed;
@@ -216,13 +216,22 @@ body {
 /* MOBILE SCREEN */
 
 @media only screen and (max-width: 750px) {
+  .wordArt {
+    height: 7vh;
+
+  }
+
   .cutoutMax {
     height: 55vh;
   }
 
+  .cutoutMin {
+    height: 30vh;
+  }
+
   .window-small {
     width: 90vw !important;
-    min-height: 30vh !important;
+    height: auto !important;
     transform: translate(-50%, -50%);
     position: fixed;
     left: 50%;
@@ -252,16 +261,16 @@ body {
   }
 
   .snake-container {
-    width: 75vw;
-    height: 75vw;
+    width: 70vw;
+    height: 70vw;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .snake-grid {
-    width: 75vw;
-    height: 75vw;
+    width: 70vw;
+    height: 70vw;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -270,22 +279,20 @@ body {
 
   .grid-item {
     outline: 1px solid grey;
-    width: 7.5vw;
-    height: 7.5vw;
+    width: 7vw;
+    height: 7vw;
   }
 
   .snake {
-    outline: 1px solid blue;
-    background-color: blue;
-    width: 7.5vw;
-    height: 7.5vw;
+    background: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
+    width: 7vw;
+    height: 7vw;
   }
 
   .food {
-    outline: 1px solid yellow;
-    background-color: yellow;
-    width: 7.5vw;
-    height: 7.5vw;
+    background: radial-gradient(circle, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    width: 7vw;
+    height: 7vw;
   }
 
 

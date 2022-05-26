@@ -15,6 +15,7 @@ export const WavbandTab = (props) => {
 
     return (
         <Window className='window pattern-dots '>
+            
             <WindowHeader className='window-header'>
                 <span>WAV Bands.exe</span>
                 <Button onClick={() => { dispatch(updateWindow('none')) }}>
@@ -47,7 +48,7 @@ export const WavbandTab = (props) => {
 
                             <div className='row g-3 py-3'>
 
-                                <div className='col-lg-3 text-left'>
+                                <div className='col-lg-4 text-left'>
                                     <Panel style={{ width: '100%' }}>
                                         <WindowContent>
                                             <Fieldset label='Made with...'>

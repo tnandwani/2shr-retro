@@ -221,21 +221,21 @@ class Snake extends Component {
                 <Panel>
                     <div className="m-2 mx-5">
 
-                        <Button onClick={() => { this.buttonDirection(UP) }} style={{ margin: '5px', padding: '20px' }}>
+                        <Button onClick={() => { this.buttonDirection(UP) }} >
                             ⬆️
                         </Button>
                         <div className="d-flex">
-                            <Button onClick={() => { this.buttonDirection(LEFT) }} style={{ margin: '5px', padding: '20px' }}>
+                            <Button onClick={() => { this.buttonDirection(LEFT) }}>
                                 ⬅️
                             </Button>
-                            <Button onClick={() => { this.buttonDirection(STOP) }} style={{ margin: '5px', padding: '20px' }}>
+                            <Button onClick={() => { this.buttonDirection(STOP) }}>
                                 🐍
                             </Button>
-                            <Button onClick={() => { this.buttonDirection(RIGHT) }} style={{ margin: '5px', padding: '20px' }}>
+                            <Button onClick={() => { this.buttonDirection(RIGHT) }}>
                                 ➡️
                             </Button>
                         </div>
-                        <Button onClick={() => { this.buttonDirection(DOWN) }} style={{ margin: '5px', padding: '20px' }}>
+                        <Button onClick={() => { this.buttonDirection(DOWN) }}>
                             ⬇️
                         </Button>
                     </div>

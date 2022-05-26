@@ -31,7 +31,7 @@ export const DiscoTab = (props) => {
                     View Site
                 </Button>
                 <Button variant='menu' size='sm' onClick={() => { window.open('https://disco-music.herokuapp.com/') }}>
-                    Old Beta
+                    Old
                 </Button>
             </Toolbar>
 
@@ -46,7 +46,7 @@ export const DiscoTab = (props) => {
 
                             <div className='row g-3 py-3'>
 
-                                <div className='col-lg-3 text-left'>
+                                <div className='col-lg-4 text-left'>
                                     <Panel style={{ width: '100%' }}>
                                         <WindowContent>
                                             <Fieldset label='Made with...'>

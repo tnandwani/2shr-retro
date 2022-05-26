@@ -41,7 +41,7 @@ export const Skills = (props) => {
 
                             // FRONT END
                             <Cutout >
-                                <div class="row row-cols-2 row-cols-sm-3 gx-1 p-1 gy-3 py-4">
+                                <div class="row row-cols-2 row-cols-sm-3 gx-1 p-1 gy-3 py-4 cutoutMax">
                                     <div class="col text-center">
                                         <img alt='react' className='toolLogo' src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" />
                                         <p>React</p>
@@ -85,7 +85,7 @@ export const Skills = (props) => {
 
                             // BACK END
                             <Cutout >
-                                <div class="row row-cols-2 row-cols-sm-3 gx-1 p-1 gy-3 py-4">
+                                <div class="row row-cols-2 row-cols-sm-3 gx-1 p-1 gy-3 py-4 cutoutMax">
                                     <div class="col text-center">
                                         <img alt='NodeJS' className='toolLogo' src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png" />
                                         <p>NodeJS</p>
@@ -130,7 +130,7 @@ export const Skills = (props) => {
                         {activeTab === 2 && (
                             // DEV OPS
                             <Cutout >
-                                <div class="row row-cols-2 row-cols-sm-3 gx-1 p-1 gy-3 py-4">
+                                <div class="row row-cols-2 row-cols-sm-3 gx-1 p-1 gy-3 py-4 cutoutMax">
                                     <div class="col text-center">
                                         <img alt='react' className='toolLogo' src="https://cdn-icons-png.flaticon.com/512/25/25231.png" />
                                         <p>Github</p>
