@@ -97,6 +97,10 @@ body {
 
 .snakeFont {
   font-size: 30px;
+  font-weight: 600;
+  background: -webkit-linear-gradient(rgb(215, 194, 8), rgb(5, 149, 61));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .window-game {
@@ -164,6 +168,14 @@ body {
 
 /* SNAKE STUFF */
 
+.snakeScore {
+  font-size: 20px;
+  font-weight: 400;
+  background: -webkit-linear-gradient(rgb(215, 194, 8), rgb(5, 149, 61));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .snake-container {
   display: flex;
   align-items: center;
@@ -192,8 +204,8 @@ body {
 }
 
 .food {
-  outline: 1px solid yellow;
-  background-color: yellow;
+  background: radial-gradient(circle, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+  border-radius: 50%;
   width: 50px;
   height: 50px;
 }

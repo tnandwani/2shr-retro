@@ -199,7 +199,7 @@ class Snake extends Component {
                             <h1>~ Press any arrow key to start ~</h1>
                         }
                         {((this.state.direction) !== STOP) &&
-                            <h1>{(this.state.snake.length * 10)} </h1>
+                            <h1 className="snakeScore">{(this.state.snake.length * 10)} </h1>
 
                         }
 
