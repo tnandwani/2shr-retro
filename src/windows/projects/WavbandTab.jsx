@@ -74,14 +74,14 @@ export const WavbandTab = (props) => {
                                     <div className='row g-3 mx-1'>
                                         <Panel variant={'inside'}>
                                             <p className='m-3'>
-                                                A freelance project I took on. Augma allows you to buy physical art in an augmented reality marketplace. You can choose from a wide variety of art and place it in your room using the iPhone's AR abilities. You can then order the art directly to your home.
+                                                The WAV Band is a revolutionary product at the intersection of fashion and technology. It is a simple bracelet that has the power to turn any speaker wireless. Despite it falling in the “geeky” category of a wearable, it manages to effortlessly blend in as a sleek addition to any outfit. Thus, allowing you to carry it wherever you go, without it seeming like a burden. The WAV Band acts as a Bluetooth receiver and allows you to get rid of cables and go wireless!
                                             </p>
                                         </Panel>
 
 
                                         <Panel variant={'inside'}>
                                             <p className='m-3'>
-                                                Demo by request per founders request.
+                                                Release date TBD
                                             </p>
                                         </Panel>
                                     </div>

@@ -104,7 +104,7 @@ export const Skills = (props) => {
                                         <p>Redux</p>
                                     </div>
                                     <div class="col text-center">
-                                        <img alt='PostgresSQL' className='toolLogo' src="http://assets.stickpng.com/images/584815fdcef1014c0b5e497a.png" />
+                                        <img alt='PostgresSQL' className='toolLogo' src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/993px-Postgresql_elephant.svg.png" />
                                         <p>PostgresSQL</p>
                                     </div>
                                     <div class="col text-center">
@@ -112,7 +112,7 @@ export const Skills = (props) => {
                                         <p>AppWrite</p>
                                     </div>
                                     <div class="col text-center">
-                                        <img alt='MongoDb' className='toolLogo' src="https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_original_logo_icon_146424.png" />
+                                        <img alt='MongoDb' className='toolLogo' src="https://cdn.iconscout.com/icon/free/png-256/mongodb-3521676-2945120.png" />
                                         <p>MongoDb</p>
                                     </div>
                                     <div class="col text-center">
