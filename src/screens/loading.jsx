@@ -9,7 +9,16 @@ export const LoadingScreen = (props) => {
                 <br />
                 <Progress shadow variant='tile' value={Math.floor(props.percent)} />
                 <br />
-                <h1 className='text-center'>Loading the greatest website on the internet.</h1>
+
+                {props.percent < 30 &&
+                    <h1 className='text-center'>Loading the greatest website on the internet.</h1>
+                }
+                {props.percent > 30 && props.percent < 60 &&
+                    <h1 className='text-center'>Do you feel the nostalgia yet?</h1>
+                }
+                {props.percent > 60 &&
+                    <h1 className='text-center'>Brace for impact</h1>
+                }
 
 
                 <br />
