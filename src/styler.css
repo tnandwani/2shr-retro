@@ -96,7 +96,7 @@ body {
 }
 
 .snakeFont {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 600;
   background: -webkit-linear-gradient(rgb(215, 194, 8), rgb(5, 149, 61));
   -webkit-background-clip: text;
@@ -305,15 +305,15 @@ body {
 
 
 
-/* DPAD */
+/* DPAD  */
 
 .circle {
   transform: translate(-50%, 0%);
   position: fixed;
   left: 50%;
   right: 50%;
-  height: 150px;
-  width: 150px;
+  height: 125px;
+  width: 125px;
   background-color: currentColor;
   position: absolute;
   border-radius: 100%;
@@ -323,8 +323,8 @@ body {
 
 .crossCenter {
   background-color: #333333;
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   transform: translate(-50%, -50%);
   margin-top: 50%;
   margin-left: 50%;
@@ -339,8 +339,8 @@ body {
 
 .crossCircle {
   background-color: #292929;
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   position: absolute;
   border-radius: 100%;
   margin-top: 5px;
@@ -349,36 +349,36 @@ body {
 
 .crossTop {
   background-color: #333333;
-  width: 45px;
-  height: 60px;
+  width: 35px;
+  height: 35px;
   position: absolute;
   border-radius: 15%;
-  margin-top: -45px;
+  margin-top: -30px;
 }
 
 .crossBottom {
   background-color: #333333;
-  width: 45px;
-  height: 60px;
+  width: 35px;
+  height: 35px;
   position: absolute;
   border-radius: 15%;
-  margin-top: 45px;
+  margin-top: 30px;
 }
 
 .crossLeft {
   background-color: #333333;
-  width: 60px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   position: absolute;
   border-radius: 15%;
-  margin-left: -45px;
+  margin-left: -30px;
 }
 
 .crossRight {
   background-color: #333333;
-  width: 60px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   position: absolute;
   border-radius: 15%;
-  margin-left: 45px;
+  margin-left: 30px;
 }
