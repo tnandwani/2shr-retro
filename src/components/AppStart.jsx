@@ -51,7 +51,7 @@ export default function AppStart() {
                                 }}
                                 onClick={() => setOpen(false)}>
                                 <ListItem onClick={() => { window.open("https://github.com/tnandwani/") }}>
-                                    Githhub
+                                    GitHub
                                     <Setupslt3000 variant="32x32_4" />
                                 </ListItem>
 
