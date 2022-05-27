@@ -14,10 +14,10 @@ export default function Timeline() {
                         <h1 className='m-2'>I learned competed in FIRST robotics competition</h1>
                     }
                     {year == 2014 &&
-                        <h1 className='m-2'>I learned some C++</h1>
+                        <h1 className='m-2'>I learned the basics of C++</h1>
                     }
                     {year == 2015 &&
-                        <h1 className='m-2'>I learned some Python. Sorta.</h1>
+                        <h1 className='m-2'>I learned Python. Sorta.</h1>
                     }
                     {year == 2016 &&
                         <h1 className='m-2'>I learned some Swift. It had just come out at the time</h1>
@@ -26,7 +26,7 @@ export default function Timeline() {
                         <h1 className='m-2'>I learned the fundamentals of web development. The holy trinity of HTML, CSS, and JS</h1>
                     }
                     {year == 2018 &&
-                        <h1 className='m-2'>I learned some React. When it was still class based</h1>
+                        <h1 className='m-2'>I learned React. When it was still class based</h1>
                     }
                     {year == 2019 &&
                         <h1 className='m-2'>I got way better at React. Started using Redux and functional components</h1>
@@ -35,7 +35,7 @@ export default function Timeline() {
                         <h1 className='m-2'>I learned some R and Postgres SQL for my finance job</h1>
                     }
                     {year == 2021 &&
-                        <h1 className='m-2'>I learned some React Native.</h1>
+                        <h1 className='m-2'>I learned React Native.</h1>
                     }
                     {year == 2022 &&
                         <h1 className='m-2'>Launched my first cross platform app.</h1>
