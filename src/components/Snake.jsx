@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { useSelector } from "react-redux";
-import { Panel, Button } from "react95";
+import { Panel } from "react95";
 import { setHighScore } from "../brain";
 import { setScoreState } from "../redux/slices/interfaceSlice";
 import store from "../redux/store";
@@ -192,7 +192,7 @@ class Snake extends Component {
             <div className="text-center">
                 <Panel>
                     <div className="mx-5">
-                        <h1 className="snakeFont mx-5" >SNAKE </h1>
+                      
                         <h1>GLOBAL HIGH SCORE: <span><ReduxHighScore /></span></h1>
 
                         {((this.state.direction) === STOP) &&

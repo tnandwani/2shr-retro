@@ -61,7 +61,7 @@ export default function AppStart() {
 
                                 </ListItem>
                                 <Divider />
-                                <ListItem onClick={() => { window.open("mailto:someone@yoursite.com") }}>
+                                <ListItem onClick={() => { window.open("mailto:me@tnandwani.com") }}>
                                     Email Me
                                     <Progman35 variant="32x32_4" />
                                 </ListItem>

@@ -9,7 +9,7 @@ import wavbandsHeader from './wordart/iconwavbands.png';
 export const WavbandTab = (props) => {
     const dispatch = useDispatch();
 
-    const toolkit = ['PCB Design', 'AutoCAD', "3D Printing", "International Manufacturers", "Amazong FBA"]
+    const toolkit = ['PCB Design', 'AutoCAD', "3D Printing", "International Manufacturers", "Amazon FBA"]
 
 
 

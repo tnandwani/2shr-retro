@@ -19,7 +19,7 @@ export const Games = (props) => {
     return (
         <Window className='window-game pattern-dots'>
             <WindowHeader className='window-header'>
-                <span>Games</span>
+                <span className="snakeFont"> 🐍 Snake</span>
                 <Button onClick={() => { dispatch(updateWindow('none')) }}>
                     <span>x</span>
                 </Button>

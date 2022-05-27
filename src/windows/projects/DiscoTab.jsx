@@ -41,7 +41,7 @@ export const DiscoTab = (props) => {
                     View Site
                 </Button>
                 <Button variant='menu' size='sm' onClick={() => { window.open('https://disco-music.herokuapp.com/') }}>
-                    Old
+                    Outdated Beta
                 </Button>
             </Toolbar>
 
