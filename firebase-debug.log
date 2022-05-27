@@ -1,0 +1,47 @@
+[debug] [2022-05-27T20:06:40.998Z] ----------------------------------------------------------------------
+[debug] [2022-05-27T20:06:41.000Z] Command:       /usr/local/bin/node /Users/tnandwani/Documents/iDocuments/Work/Resumes/portfolios/2shr-retro/node_modules/.bin/firebase deploy
+[debug] [2022-05-27T20:06:41.000Z] CLI Version:   11.0.0
+[debug] [2022-05-27T20:06:41.000Z] Platform:      darwin
+[debug] [2022-05-27T20:06:41.000Z] Node Version:  v16.10.0
+[debug] [2022-05-27T20:06:41.005Z] Time:          Fri May 27 2022 13:06:41 GMT-0700 (Pacific Daylight Time)
+[debug] [2022-05-27T20:06:41.006Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-27T20:06:41.076Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-27T20:06:41.076Z] > authorizing via signed-in user (x2shrx@gmail.com)
+[debug] [2022-05-27T20:06:41.077Z] [iam] checking project tnandwani-89b2a for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-05-27T20:06:41.078Z] > refreshing access token with scopes: []
+[debug] [2022-05-27T20:06:41.079Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-05-27T20:06:41.392Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Fri, 27 May 2022 20:06:41 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-05-27T20:06:41.421Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tnandwani-89b2a:testIamPermissions [none]
+[debug] [2022-05-27T20:06:41.421Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tnandwani-89b2a:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-05-27T20:06:41.992Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tnandwani-89b2a:testIamPermissions 200
+[debug] [2022-05-27T20:06:41.992Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tnandwani-89b2a:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-05-27T20:06:41.993Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tnandwani-89b2a [none]
+[debug] [2022-05-27T20:06:42.543Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tnandwani-89b2a 200
+[debug] [2022-05-27T20:06:42.544Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tnandwani-89b2a {"projectId":"tnandwani-89b2a","projectNumber":"152924784111","displayName":"Tnandwani","name":"projects/tnandwani-89b2a","resources":{"hostingSite":"tnandwani-89b2a","realtimeDatabaseInstance":"tnandwani-89b2a","storageBucket":"tnandwani-89b2a.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'tnandwani-89b2a'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-05-27T20:06:42.546Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tnandwani-89b2a [none]
+[debug] [2022-05-27T20:06:42.905Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tnandwani-89b2a 200
+[debug] [2022-05-27T20:06:42.905Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tnandwani-89b2a {"projectId":"tnandwani-89b2a","projectNumber":"152924784111","displayName":"Tnandwani","name":"projects/tnandwani-89b2a","resources":{"hostingSite":"tnandwani-89b2a","realtimeDatabaseInstance":"tnandwani-89b2a","storageBucket":"tnandwani-89b2a.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[debug] [2022-05-27T20:06:42.907Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/152924784111/sites/tnandwani-89b2a/versions [none]
+[debug] [2022-05-27T20:06:42.907Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/152924784111/sites/tnandwani-89b2a/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-05-27T20:06:53.383Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/152924784111/sites/tnandwani-89b2a/versions 503
+[debug] [2022-05-27T20:06:53.383Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/152924784111/sites/tnandwani-89b2a/versions {"error":{"code":503,"message":"The service is currently unavailable.","status":"UNAVAILABLE"}}
+[error] 
+[error] Error: HTTP Error: 503, The service is currently unavailable.
+[debug] [2022-05-27T20:06:53.386Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 503,
+      "message": "The service is currently unavailable.",
+      "status": "UNAVAILABLE"
+    }
+  },
+  "response": {
+    "statusCode": 503
+  }
+}
