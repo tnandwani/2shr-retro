@@ -33,7 +33,7 @@ export const WavbandTab = (props) => {
                 <Button variant='menu' size='sm' onClick={() => { window.open('https://wavbands.com/') }}>
                     Visit Site
                 </Button>
-                <Button variant='menu' size='sm' onClick={() => { window.open('https://wavbands.com/') }}>
+                <Button variant='menu' size='sm' onClick={() => { window.open('https://www.kickstarter.com/projects/1288271757/wav-bands-youll-never-need-an-aux-cord-again') }}>
                     Kickstarter
                 </Button>
             </Toolbar>
